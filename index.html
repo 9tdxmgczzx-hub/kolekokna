@@ -2,15 +2,27 @@
 <html lang="cs">
 <head>
 
-<meta name="google-site-verification" content="-ItyTz9ndQcD2tNTzjO7nH5OtPvdb7GDva7fr8W3Ei4" />
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="-ItyTz9ndQcD2tNTzjO7nH5OtPvdb7GDva7fr8W3Ei4">
 
-   <title>Servis oken Hradec Králové a Pardubice | OKNA KOLEK</title>
+<!-- SEO -->
+<title>Servis oken Hradec Králové a Pardubice | OKNA KOLEK</title>
 
-<meta name="description" content="OKNA KOLEK nabízí servis a seřízení oken, výměnu prasklých skel a seřízení HS Portal posuvných dveří. Hradec Králové, Pardubice a okolí do 60 km.">
+<meta name="description" content="OKNA KOLEK – servis oken v Hradci Králové a Pardubicích. Seřízení a opravy oken, kontrola těsnění, výměna skel a seřízení HS Portal. Servis do 60 km.">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Miroslav Kolek">
+
+<link rel="canonical" href="https://9tdxmgczzx-hub.github.io/kolekokna/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="OKNA KOLEK – Servis oken Hradec Králové a Pardubice">
+<meta property="og:description" content="Servis a seřízení oken, kontrola těsnění, výměna skel a seřízení HS Portal. Hradec Králové, Pardubice a okolí do 60 km.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://9tdxmgczzx-hub.github.io/kolekokna/">
 
 <style>
 
@@ -42,7 +54,6 @@ select,
 textarea{
 font-family:inherit;
 }
-
 
 /* =========================
    HEADER
@@ -125,7 +136,6 @@ background:rgba(255,255,255,.08);
 background:white;
 color:#111820;
 }
-
 
 /* =========================
    HERO
@@ -274,7 +284,6 @@ transform:translateY(0);
 }
 }
 
-
 /* =========================
    HERO WINDOW
 ========================= */
@@ -299,12 +308,10 @@ animation:pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse{
-
 50%{
 transform:scale(1.25);
 opacity:.25;
 }
-
 }
 
 .window{
@@ -352,14 +359,12 @@ border-top:2px solid rgba(255,255,255,.22);
 }
 
 @keyframes windowFloat{
-
 50%{
 transform:
 perspective(900px)
 rotateY(-8deg)
 translateY(-15px);
 }
-
 }
 
 .float-card{
@@ -391,13 +396,10 @@ animation:smallFloat 4.5s .5s ease-in-out infinite;
 }
 
 @keyframes smallFloat{
-
 50%{
 transform:translateY(-10px);
 }
-
 }
-
 
 /* =========================
    STATS
@@ -435,7 +437,6 @@ font-size:12px;
 color:#7b8790;
 }
 
-
 /* =========================
    SECTIONS
 ========================= */
@@ -459,6 +460,48 @@ letter-spacing:-4px;
 margin-bottom:50px;
 }
 
+/* =========================
+   SEO INTRO
+========================= */
+
+.seo-intro{
+background:#ffffff;
+padding:70px 0;
+border-bottom:1px solid #e5eaee;
+}
+
+.seo-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.seo-intro h2{
+font-size:clamp(32px,4vw,48px);
+line-height:1.05;
+letter-spacing:-2px;
+margin-bottom:20px;
+}
+
+.seo-intro p{
+font-size:16px;
+line-height:1.9;
+color:#68757e;
+}
+
+.seo-list{
+display:grid;
+gap:12px;
+}
+
+.seo-item{
+padding:17px 20px;
+border-radius:14px;
+background:#f5f7fa;
+border:1px solid #e3e8ec;
+font-weight:800;
+}
 
 /* =========================
    FLIP SERVICES
@@ -481,11 +524,8 @@ perspective:1200px;
 width:100%;
 height:100%;
 position:relative;
-
 transform-style:preserve-3d;
-
-transition:
-transform .8s cubic-bezier(.2,.8,.2,1);
+transition:transform .8s cubic-bezier(.2,.8,.2,1);
 }
 
 .flip-card.active .flip-inner{
@@ -496,11 +536,8 @@ transform:rotateY(180deg);
 .flip-back{
 position:absolute;
 inset:0;
-
 border-radius:27px;
-
 overflow:hidden;
-
 backface-visibility:hidden;
 -webkit-backface-visibility:hidden;
 }
@@ -509,7 +546,6 @@ backface-visibility:hidden;
 background:white;
 border:1px solid #e3e8ec;
 padding:32px;
-
 transition:.3s;
 }
 
@@ -519,19 +555,10 @@ box-shadow:0 30px 70px rgba(10,20,30,.1);
 
 .flip-back{
 transform:rotateY(180deg);
-
 padding:30px;
-
 display:flex;
 align-items:flex-end;
-
-background:
-linear-gradient(
-135deg,
-#09121b,
-#1b3445
-);
-
+background:linear-gradient(135deg,#09121b,#1b3445);
 color:white;
 }
 
@@ -539,25 +566,16 @@ color:white;
 content:"";
 position:absolute;
 inset:0;
-
-background:
-radial-gradient(
-circle at 20% 20%,
-rgba(87,219,255,.22),
-transparent 35%
-);
-
+background:radial-gradient(circle at 20% 20%,rgba(87,219,255,.22),transparent 35%);
 }
 
 .flip-hint{
 position:absolute;
 top:20px;
 right:20px;
-
 font-size:10px;
 font-weight:900;
 letter-spacing:.7px;
-
 color:#929da5;
 }
 
@@ -570,27 +588,14 @@ color:#9aa4ab;
 .icon{
 width:60px;
 height:60px;
-
 margin:48px 0 25px;
-
 display:grid;
 place-items:center;
-
 border-radius:17px;
-
 font-size:26px;
-
-background:
-linear-gradient(
-135deg,
-#101820,
-#344957
-);
-
+background:linear-gradient(135deg,#101820,#344957);
 color:white;
-
-box-shadow:
-0 15px 35px rgba(10,20,30,.15);
+box-shadow:0 15px 35px rgba(10,20,30,.15);
 }
 
 .flip-front h3{
@@ -607,12 +612,9 @@ color:#697680;
 .back-symbol{
 position:absolute;
 inset:0;
-
 display:grid;
 place-items:center;
-
 font-size:120px;
-
 opacity:.13;
 }
 
@@ -639,7 +641,6 @@ line-height:1.7;
 color:#c1ccd3;
 }
 
-
 /* =========================
    INTERACTIVE
 ========================= */
@@ -649,7 +650,6 @@ background:
 radial-gradient(circle at 15% 20%,rgba(50,213,255,.14),transparent 27%),
 radial-gradient(circle at 85% 80%,rgba(116,83,255,.15),transparent 30%),
 linear-gradient(135deg,#070c12,#111e2b);
-
 color:white;
 }
 
@@ -675,19 +675,13 @@ color:#abb9c3;
 
 .launch{
 margin-top:30px;
-
 padding:17px 24px;
-
 border:0;
 border-radius:14px;
-
 background:white;
 color:#101820;
-
 font-weight:900;
-
 cursor:pointer;
-
 transition:.3s;
 }
 
@@ -697,43 +691,27 @@ transform:translateY(-4px) scale(1.02);
 
 .check-box{
 min-height:410px;
-
 padding:35px;
-
 border-radius:28px;
-
 border:1px solid rgba(255,255,255,.13);
-
 background:rgba(255,255,255,.055);
-
 backdrop-filter:blur(20px);
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 text-align:center;
 }
 
 .check-box button{
 width:100%;
-
 padding:15px;
-
 margin-top:10px;
-
 border-radius:12px;
-
 border:1px solid rgba(255,255,255,.12);
-
 background:rgba(255,255,255,.05);
-
 color:white;
-
 font-weight:700;
-
 cursor:pointer;
-
 transition:.2s;
 }
 
@@ -744,29 +722,17 @@ transform:translateY(-2px);
 
 .progress{
 height:6px;
-
 background:rgba(255,255,255,.1);
-
 border-radius:20px;
-
 overflow:hidden;
-
 margin:20px 0;
 }
 
 .progress-bar{
 height:100%;
-
-background:
-linear-gradient(
-90deg,
-#5ddcff,
-#9a88ff
-);
-
+background:linear-gradient(90deg,#5ddcff,#9a88ff);
 transition:.5s;
 }
-
 
 /* =========================
    ABOUT
@@ -791,15 +757,10 @@ color:#68757e;
 
 .contact-card{
 padding:35px;
-
 border-radius:28px;
-
 background:#101820;
-
 color:white;
-
-box-shadow:
-0 30px 70px rgba(10,20,30,.15);
+box-shadow:0 30px 70px rgba(10,20,30,.15);
 }
 
 .contact-card h3{
@@ -809,9 +770,7 @@ margin-bottom:25px;
 
 .contact-row{
 padding:17px 0;
-
-border-bottom:
-1px solid rgba(255,255,255,.1);
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .contact-row:last-child{
@@ -820,16 +779,11 @@ border:none;
 
 .contact-row small{
 display:block;
-
 font-size:10px;
-
 letter-spacing:1.5px;
-
 color:#84919a;
-
 margin-bottom:5px;
 }
-
 
 /* =========================
    ORDER
@@ -848,49 +802,34 @@ align-items:start;
 
 .steps{
 margin-top:35px;
-
 display:grid;
-
 gap:15px;
 }
 
 .step{
 display:flex;
 align-items:center;
-
 gap:12px;
-
 font-size:13px;
-
 font-weight:800;
 }
 
 .step-number{
 width:32px;
 height:32px;
-
 display:grid;
 place-items:center;
-
 background:#101820;
-
 color:white;
-
 border-radius:10px;
 }
 
 .form{
 padding:35px;
-
 border-radius:28px;
-
 background:#f7f9fa;
-
-border:
-1px solid #e2e7eb;
-
-box-shadow:
-0 25px 60px rgba(10,20,30,.06);
+border:1px solid #e2e7eb;
+box-shadow:0 25px 60px rgba(10,20,30,.06);
 }
 
 .fields{
@@ -918,20 +857,12 @@ font-weight:800;
 .field select,
 .field textarea{
 width:100%;
-
 padding:15px;
-
-border:
-1px solid #dce2e6;
-
+border:1px solid #dce2e6;
 border-radius:12px;
-
 background:white;
-
 outline:none;
-
 font-size:14px;
-
 transition:.2s;
 }
 
@@ -939,27 +870,20 @@ transition:.2s;
 .field select:focus,
 .field textarea:focus{
 border-color:#6574ff;
-
-box-shadow:
-0 0 0 4px rgba(101,116,255,.08);
+box-shadow:0 0 0 4px rgba(101,116,255,.08);
 }
 
 .field textarea{
 min-height:140px;
-
 resize:vertical;
 }
 
 .submit{
 width:100%;
-
 border:0;
-
 cursor:pointer;
-
 margin-top:20px;
 }
-
 
 /* =========================
    FOOTER
@@ -967,17 +891,13 @@ margin-top:20px;
 
 footer{
 background:#070c11;
-
 color:white;
-
 padding:35px 0;
 }
 
 .footer{
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
 }
 
@@ -989,7 +909,6 @@ letter-spacing:1px;
 font-size:13px;
 color:#9ca8b0;
 }
-
 
 /* =========================
    MOBILE
@@ -1030,7 +949,8 @@ grid-template-columns:1fr;
 
 .interactive-grid,
 .about-grid,
-.order-grid{
+.order-grid,
+.seo-grid{
 grid-template-columns:1fr;
 }
 
@@ -1068,11 +988,41 @@ letter-spacing:-3px;
 }
 
 </style>
+
+<!-- Strukturovaná data pro Google -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"OKNA KOLEK",
+  "description":"Servis a seřízení oken, kontrola těsnění, výměna skel a seřízení HS Portal.",
+  "url":"https://9tdxmgczzx-hub.github.io/kolekokna/",
+  "telephone":"+420737180350",
+  "email":"miroslav.kolek@outlook.com",
+  "areaServed":[
+    {
+      "@type":"City",
+      "name":"Hradec Králové"
+    },
+    {
+      "@type":"City",
+      "name":"Pardubice"
+    }
+  ],
+  "serviceType":[
+    "Servis oken",
+    "Seřízení oken",
+    "Oprava oken",
+    "Kontrola těsnění oken",
+    "Výměna skel",
+    "Seřízení HS Portal"
+  ]
+}
+</script>
+
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
@@ -1091,7 +1041,6 @@ letter-spacing:-3px;
 OKNA KOLEK
 
 </a>
-
 
 <div class="nav-buttons">
 
@@ -1128,24 +1077,21 @@ SERVIS OKEN A DVEŘÍ
 
 </div>
 
-
 <h1>
 
-Aby vaše okna
+Servis oken
 
 <span class="gradient">
-fungovala správně.
+Hradec & Pardubice.
 </span>
 
 </h1>
 
-
 <p>
 
-Seřízení oken, kontrola těsnění, výměna prasklých skel a seřízení HS Portal posuvných dveří. Hradec Králové, Pardubice a okolí do 60 km.
+<strong>Servis oken Hradec Králové a Pardubice</strong> – seřízení oken, kontrola těsnění, řešení problémů s otevíráním a zavíráním, výměna prasklých skel a seřízení HS Portal posuvných dveří. Servis poskytujeme také v okolí do 60 km.
 
 </p>
-
 
 <div class="buttons">
 
@@ -1161,7 +1107,6 @@ Objednat servis →
 
 </div>
 
-
 <div class="visual">
 
 <div class="glow"></div>
@@ -1173,7 +1118,7 @@ Objednat servis →
 </div>
 
 <div class="float-card card2">
-📍 Okolí do 60 km
+📍 Hradec • Pardubice • 60 km
 </div>
 
 </div>
@@ -1192,33 +1137,31 @@ Objednat servis →
 <div class="stat">
 
 <strong>
-Hradec Králové
+Servis oken Hradec Králové
 </strong>
 
 <span>
-a okolí
+Hradec Králové a okolí
 </span>
 
 </div>
 
-
 <div class="stat">
 
 <strong>
-Pardubice
+Servis oken Pardubice
 </strong>
 
 <span>
-a okolí
+Pardubice a okolí
 </span>
 
 </div>
 
-
 <div class="stat">
 
 <strong>
-Do 60 km
+Okolí do 60 km
 </strong>
 
 <span>
@@ -1232,6 +1175,71 @@ oblast servisu
 </div>
 
 
+<!-- SEO SECTION -->
+
+<section class="seo-intro">
+
+<div class="container seo-grid">
+
+<div>
+
+<div class="label">
+SERVIS OKEN
+</div>
+
+<h2>
+Servis oken v Hradci Králové a Pardubicích
+</h2>
+
+<p>
+
+OKNA KOLEK nabízí servis oken v <strong>Hradci Králové</strong>, <strong>Pardubicích</strong> a okolí. Pokud okno špatně dovírá, drhne, hůře se otevírá nebo máte pocit, že netěsní, můžeme problém zkontrolovat a navrhnout vhodné řešení.
+
+</p>
+
+<br>
+
+<p>
+
+Provádíme také <strong>seřízení oken</strong>, kontrolu a řešení problémů s <strong>těsněním</strong>, <strong>výměnu prasklých skel</strong> a <strong>seřízení HS Portal posuvných dveří</strong>.
+
+</p>
+
+</div>
+
+<div class="seo-list">
+
+<div class="seo-item">
+🪟 Servis oken Hradec Králové
+</div>
+
+<div class="seo-item">
+🔧 Seřízení oken Hradec Králové
+</div>
+
+<div class="seo-item">
+🪟 Servis oken Pardubice
+</div>
+
+<div class="seo-item">
+🔧 Seřízení oken Pardubice
+</div>
+
+<div class="seo-item">
+◇ Výměna skel a oprava problémů s okny
+</div>
+
+<div class="seo-item">
+↔ HS Portal – seřízení posuvných dveří
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- SERVICES -->
 
 <section id="sluzby">
@@ -1242,7 +1250,6 @@ oblast servisu
 SLUŽBY
 </div>
 
-
 <h2 class="title">
 
 Co pro vás
@@ -1250,7 +1257,6 @@ Co pro vás
 vyřešíme.
 
 </h2>
-
 
 <div class="services">
 
@@ -1261,7 +1267,6 @@ vyřešíme.
 onclick="this.classList.toggle('active')">
 
 <div class="flip-inner">
-
 
 <div class="flip-front">
 
@@ -1282,11 +1287,10 @@ Seřízení oken
 </h3>
 
 <p>
-Okno špatně dovírá, drhne nebo se hůře ovládá? Správným seřízením lze jeho chod výrazně zlepšit.
+Seřízení oken v Hradci Králové, Pardubicích a okolí. Okno špatně dovírá, drhne nebo se hůře ovládá? Správným seřízením lze jeho chod výrazně zlepšit.
 </p>
 
 </div>
-
 
 <div class="flip-back">
 
@@ -1306,12 +1310,14 @@ Seřízení oken
 
 <p>
 Kontrola a seřízení oken pro pohodlnější otevírání, zavírání a správný chod.
+
+Servis poskytujeme v Hradci Králové, Pardubicích a okolí.
+
 </p>
 
 </div>
 
 </div>
-
 
 </div>
 
@@ -1324,7 +1330,6 @@ Kontrola a seřízení oken pro pohodlnější otevírání, zavírání a sprá
 onclick="this.classList.toggle('active')">
 
 <div class="flip-inner">
-
 
 <div class="flip-front">
 
@@ -1345,11 +1350,10 @@ Výměna skel
 </h3>
 
 <p>
-Prasklé nebo poškozené sklo v okně či dveřích? Domluvíme vhodné řešení a výměnu.
+Prasklé nebo poškozené sklo v okně či dveřích? Domluvíme vhodné řešení a výměnu. Dostupné pro Hradec Králové, Pardubice a okolí.
 </p>
 
 </div>
-
 
 <div class="flip-back">
 
@@ -1369,12 +1373,12 @@ Výměna skla
 
 <p>
 Řešení prasklých nebo poškozených skel podle konkrétní situace.
+
 </p>
 
 </div>
 
 </div>
-
 
 </div>
 
@@ -1387,7 +1391,6 @@ Výměna skla
 onclick="this.classList.toggle('active')">
 
 <div class="flip-inner">
-
 
 <div class="flip-front">
 
@@ -1408,11 +1411,10 @@ HS Portal
 </h3>
 
 <p>
-Seřízení velkých posuvných dveří pro lehčí, plynulejší a pohodlnější používání.
+Seřízení velkých posuvných HS Portal dveří pro lehčí, plynulejší a pohodlnější používání v Hradci Králové, Pardubicích a okolí.
 </p>
 
 </div>
-
 
 <div class="flip-back">
 
@@ -1432,17 +1434,16 @@ HS Portal
 
 <p>
 Seřízení velkých posuvných dveří a kontrola jejich správného chodu.
+
 </p>
 
 </div>
 
 </div>
 
-
 </div>
 
 </div>
-
 
 </div>
 
@@ -1466,7 +1467,6 @@ INTERAKTIVNÍ KONTROLA
 
 </div>
 
-
 <h2>
 
 Zjistěte,
@@ -1477,13 +1477,11 @@ potřebuje.
 
 </h2>
 
-
 <p class="interactive-copy">
 
 Odpovězte na několik jednoduchých otázek a lépe zjistíte, co může být potřeba zkontrolovat.
 
 </p>
-
 
 <button class="launch"
 onclick="startCheck()">
@@ -1493,7 +1491,6 @@ Spustit kontrolu →
 </button>
 
 </div>
-
 
 <div class="check-box"
 id="checkBox">
@@ -1537,7 +1534,6 @@ Klikněte na tlačítko a začněte.
 OKNA KOLEK
 </div>
 
-
 <h2 class="title">
 
 Servis přímo
@@ -1546,8 +1542,9 @@ u vás.
 
 </h2>
 
-
 <p class="about-text">
+
+OKNA KOLEK poskytuje servis oken přímo u zákazníka v Hradci Králové, Pardubicích a okolí do 60 km.
 
 Přijedu přímo na místo a společně zjistíme, co je potřeba udělat. Cena se odvíjí od konkrétní práce a jejího rozsahu.
 
@@ -1555,13 +1552,11 @@ Přijedu přímo na místo a společně zjistíme, co je potřeba udělat. Cena 
 
 </div>
 
-
 <div class="contact-card">
 
 <h3>
 Kontakt
 </h3>
-
 
 <div class="contact-row">
 
@@ -1574,7 +1569,6 @@ Miroslav Kolek
 </b>
 
 </div>
-
 
 <div class="contact-row">
 
@@ -1594,7 +1588,6 @@ TELEFON
 
 </div>
 
-
 <div class="contact-row">
 
 <small>
@@ -1613,21 +1606,19 @@ miroslav.kolek@outlook.com
 
 </div>
 
-
 <div class="contact-row">
 
 <small>
-OBLAST
+OBLAST SERVISU
 </small>
 
 <b>
 
-Hradec Králové • Pardubice • okolí 60 km
+Hradec Králové • Pardubice • okolí do 60 km
 
 </b>
 
 </div>
-
 
 </div>
 
@@ -1643,13 +1634,11 @@ id="objednavka">
 
 <div class="container order-grid">
 
-
 <div>
 
 <div class="label">
 OBJEDNÁVKA
 </div>
-
 
 <h2 class="title">
 
@@ -1659,13 +1648,11 @@ servis.
 
 </h2>
 
-
 <p class="about-text">
 
-Vyplňte formulář a popište, co potřebujete vyřešit. Ozvu se vám a domluvíme další postup.
+Potřebujete servis oken v Hradci Králové nebo Pardubicích? Vyplňte formulář a popište, co potřebujete vyřešit. Ozvu se vám a domluvíme další postup.
 
 </p>
-
 
 <div class="steps">
 
@@ -1679,7 +1666,6 @@ Vyplníte formulář
 
 </div>
 
-
 <div class="step">
 
 <div class="step-number">
@@ -1689,7 +1675,6 @@ Vyplníte formulář
 Ozvu se vám
 
 </div>
-
 
 <div class="step">
 
@@ -1708,12 +1693,10 @@ Domluvíme termín
 
 <div class="form">
 
-
 <form
 action="https://formsubmit.co/miroslav.kolek@outlook.com"
 method="POST"
 >
-
 
 <input
 type="hidden"
@@ -1721,13 +1704,11 @@ name="_subject"
 value="Nová objednávka — OKNA KOLEK"
 >
 
-
 <input
 type="hidden"
 name="_captcha"
 value="false"
 >
-
 
 <input
 type="hidden"
@@ -1735,9 +1716,7 @@ name="_template"
 value="table"
 >
 
-
 <div class="fields">
-
 
 <div class="field">
 
@@ -1753,7 +1732,6 @@ required
 
 </div>
 
-
 <div class="field">
 
 <label>
@@ -1767,7 +1745,6 @@ required
 >
 
 </div>
-
 
 <div class="field">
 
@@ -1783,7 +1760,6 @@ required
 
 </div>
 
-
 <div class="field">
 
 <label>
@@ -1798,13 +1774,11 @@ required
 
 </div>
 
-
 <div class="field full">
 
 <label>
 Jaký servis potřebujete?
 </label>
-
 
 <select
 name="Služba"
@@ -1816,7 +1790,7 @@ Vyberte službu
 </option>
 
 <option>
-Seřízení oken
+Servis / seřízení oken
 </option>
 
 <option>
@@ -1839,13 +1813,11 @@ Jiný problém
 
 </div>
 
-
 <div class="field full">
 
 <label>
 Popis problému
 </label>
-
 
 <textarea
 name="Popis problému"
@@ -1854,9 +1826,7 @@ placeholder="Například: okno netěsní, špatně dovírá, drhne, je prasklé 
 
 </div>
 
-
 </div>
-
 
 <button
 type="submit"
@@ -1866,7 +1836,6 @@ class="btn white submit"
 Odeslat objednávku →
 
 </button>
-
 
 </form>
 
@@ -1889,13 +1858,9 @@ OKNA KOLEK
 
 <span>
 
+Servis oken Hradec Králové • Pardubice • okolí 60 km
+<br>
 +420 737 180 350
-•
-Hradec
-•
-Pardubice
-•
-okolí 60 km
 
 </span>
 
@@ -1928,7 +1893,6 @@ header.classList.remove("scrolled");
 /* INTERAKTIVNÍ KONTROLA */
 
 let question=0;
-
 
 const questions=[
 
@@ -1982,7 +1946,6 @@ const box=document.getElementById("checkBox");
 
 const q=questions[question];
 
-
 let html=`
 
 <div style="width:100%">
@@ -1998,7 +1961,6 @@ OTÁZKA ${question+1} / ${questions.length}
 
 </div>
 
-
 <div class="progress">
 
 <div
@@ -2007,7 +1969,6 @@ style="width:${question/questions.length*100}%">
 </div>
 
 </div>
-
 
 <h3 style="
 font-size:24px;
@@ -2019,7 +1980,6 @@ ${q.text}
 </h3>
 
 `;
-
 
 q.answers.forEach(answer=>{
 
@@ -2035,13 +1995,11 @@ ${answer[0]}
 
 });
 
-
 html+=`
 
 </div>
 
 `;
-
 
 box.innerHTML=html;
 
@@ -2081,7 +2039,6 @@ let title="";
 let text="";
 let icon="";
 
-
 if(type==="seal"){
 
 icon="◌";
@@ -2091,7 +2048,6 @@ title="Možný problém s těsněním";
 text="Průvan nebo horší těsnost může souviset s těsněním či nastavením okna.";
 
 }
-
 
 else if(type==="adjust"){
 
@@ -2103,7 +2059,6 @@ text="Horší ovládání nebo zavírání může souviset s nastavením kován�
 
 }
 
-
 else if(type==="glass"){
 
 icon="◇";
@@ -2113,7 +2068,6 @@ title="Výměna skla";
 text="Prasklé nebo poškozené sklo je vhodné řešit jeho výměnou.";
 
 }
-
 
 else if(type==="portal"){
 
@@ -2125,7 +2079,6 @@ text="U posuvných dveří může být vhodné odborné seřízení.";
 
 }
 
-
 else{
 
 icon="◎";
@@ -2135,7 +2088,6 @@ title="Doporučujeme kontrolu";
 text="Pokud si nejste jistí, popište problém v objednávce.";
 
 }
-
 
 box.innerHTML=`
 
@@ -2149,7 +2101,6 @@ ${icon}
 
 </div>
 
-
 <h3 style="
 font-size:27px;
 margin-bottom:12px">
@@ -2158,7 +2109,6 @@ ${title}
 
 </h3>
 
-
 <p style="
 color:#aebbc5;
 line-height:1.7">
@@ -2166,7 +2116,6 @@ line-height:1.7">
 ${text}
 
 </p>
-
 
 <a
 href="#objednavka"
@@ -2183,13 +2132,11 @@ Objednat servis →
 
 </a>
 
-
 <button onclick="startCheck()">
 
 Spustit znovu
 
 </button>
-
 
 </div>
 
@@ -2198,7 +2145,6 @@ Spustit znovu
 }
 
 </script>
-
 
 </body>
 </html>
