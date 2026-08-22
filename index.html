@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OKNA KOLEK | Servis oken a dveří</title>
+
+<meta name="description" content="OKNA KOLEK – servis a seřízení oken, výměna prasklých skel a seřízení HS Portal posuvných dveří. Hradec Králové, Pardubice a okolí do 60 km.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7f9;
+    color:#101820;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,13,18,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    color:white;
+}
+
+.phone{
+    font-weight:700;
+}
+
+.nav-button{
+    background:white;
+    color:#101820;
+    padding:12px 18px;
+    border-radius:12px;
+    font-weight:800;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding:130px 0 90px;
+    display:flex;
+    align-items:center;
+    color:white;
+
+    background:
+    radial-gradient(circle at 80% 20%,rgba(79,108,125,.7),transparent 34%),
+    radial-gradient(circle at 20% 90%,rgba(44,67,78,.5),transparent 30%),
+    linear-gradient(135deg,#060c11,#172732);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 15px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50px;
+    background:rgba(255,255,255,.06);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:clamp(52px,7vw,90px);
+    line-height:.92;
+    letter-spacing:-6px;
+    margin:25px 0;
+}
+
+.hero h1 span{
+    color:#a6b4bd;
+}
+
+.hero-text{
+    max-width:650px;
+    color:#c0cbd1;
+    font-size:19px;
+    line-height:1.75;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+    margin-top:32px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 22px;
+    border-radius:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-white{
+    background:white;
+    color:#101820;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.25);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* ================= WINDOW ================= */
+
+.window-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+.window{
+    width:310px;
+    height:440px;
+    position:relative;
+
+    border:2px solid rgba(255,255,255,.45);
+
+    background:
+    linear-gradient(135deg,
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.02));
+
+    box-shadow:
+    0 40px 100px rgba(0,0,0,.55),
+    inset 0 0 50px rgba(255,255,255,.04);
+
+    transform:
+    perspective(900px)
+    rotateY(-11deg);
+
+    animation:floatWindow 5s ease-in-out infinite;
+}
+
+@keyframes floatWindow{
+
+    0%,100%{
+        transform:
+        perspective(900px)
+        rotateY(-11deg)
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        perspective(900px)
+        rotateY(-11deg)
+        translateY(-12px);
+    }
+}
+
+.window:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    height:100%;
+    border-left:1px solid rgba(255,255,255,.4);
+}
+
+.window:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    border-top:1px solid rgba(255,255,255,.4);
+}
+
+/* ================= TRUST ================= */
+
+.trust{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    background:white;
+    border-bottom:1px solid #e3e8eb;
+}
+
+.trust-box{
+    text-align:center;
+    padding:27px;
+    border-right:1px solid #e3e8eb;
+}
+
+.trust-box:last-child{
+    border-right:none;
+}
+
+.trust-box small{
+    display:block;
+    color:#74818a;
+    margin-top:4px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:110px 0;
+}
+
+.label{
+    color:#71808b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:14px;
+}
+
+.section-title{
+    font-size:clamp(40px,5vw,62px);
+    line-height:.98;
+    letter-spacing:-4px;
+    margin-bottom:50px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    background:white;
+    border:1px solid #dfe6ea;
+    border-radius:25px;
+    padding:32px;
+    min-height:310px;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-9px);
+    box-shadow:0 30px 70px rgba(9,20,30,.11);
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    display:grid;
+    place-items:center;
+    background:#101820;
+    color:white;
+    border-radius:16px;
+    font-size:27px;
+    margin-bottom:40px;
+}
+
+.service h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#697781;
+    line-height:1.7;
+}
+
+/* ================= SPECIAL ================= */
+
+.special{
+    position:relative;
+    overflow:hidden;
+    color:white;
+
+    background:
+    radial-gradient(circle at 90% 50%,rgba(107,139,157,.45),transparent 30%),
+    linear-gradient(135deg,#071016,#1b303d);
+
+    border-top:1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.special-grid{
+    display:grid;
+    grid-template-columns:1fr .8fr;
+    gap:70px;
+    align-items:center;
+}
+
+.special-text{
+    color:#bac7ce;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.special-button{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-top:30px;
+    padding:18px 26px;
+    border-radius:15px;
+    background:white;
+    color:#101820;
+    font-size:17px;
+    font-weight:900;
+    cursor:pointer;
+    border:none;
+    transition:.3s;
+}
+
+.special-button:hover{
+    transform:scale(1.04);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.special-box{
+    min-height:300px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:28px;
+    background:rgba(255,255,255,.05);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:35px;
+    backdrop-filter:blur(10px);
+}
+
+/* ================= ABOUT ================= */
+
+.dark{
+    background:
+    linear-gradient(135deg,#080e13,#172832);
+    color:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.about-text{
+    color:#b9c5cc;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.contact-card{
+    padding:34px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.06);
+}
+
+.contact-card h3{
+    font-size:29px;
+    margin-bottom:14px;
+}
+
+.contact-row{
+    padding:17px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.contact-row:last-child{
+    border-bottom:none;
+}
+
+.contact-row small{
+    display:block;
+    color:#8997a0;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1.5px;
+    margin-bottom:3px;
+}
+
+/* ================= ORDER ================= */
+
+.order-grid{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:60px;
+}
+
+.form{
+    background:white;
+    border:1px solid #dfe6ea;
+    border-radius:25px;
+    padding:34px;
+    box-shadow:0 20px 60px rgba(10,20,30,.05);
+}
+
+.fields{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:17px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:13px;
+    font-weight:800;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d9e0e5;
+    border-radius:11px;
+    background:#fafbfc;
+    font:inherit;
+    outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#101820;
+}
+
+.field textarea{
+    min-height:135px;
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:20px;
+}
+
+.note{
+    margin-top:28px;
+    padding:20px;
+    border-radius:16px;
+    border:1px solid #dfe6ea;
+    background:white;
+    color:#687680;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#070d12;
+    color:white;
+    padding:30px 0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-grid,
+    .special-grid,
+    .about-grid,
+    .order-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        display:none;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .trust{
+        grid-template-columns:1fr;
+    }
+
+    .trust-box{
+        border-right:none;
+        border-bottom:1px solid #e3e8eb;
+    }
+
+    .fields{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .nav-phone{
+        display:none;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .section-title{
+        letter-spacing:-2px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+OKNA KOLEK
+</div>
+
+<div class="nav-right">
+
+<a class="phone nav-phone"
+href="tel:+420792316108">
+792 316 108
+</a>
+
+<a class="nav-button"
+href="#objednavka">
+Objednat servis
+</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">
+SERVIS OKEN A DVEŘÍ
+</span>
+
+<h1>
+Aby vaše okna
+<span>fungovala správně.</span>
+</h1>
+
+<p class="hero-text">
+Seřízení oken, výměna prasklých skel a profesionální seřízení HS Portal posuvných dveří.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-white"
+href="#objednavka">
+Objednat servis →
+</a>
+
+<a class="btn btn-outline"
+href="tel:+420792316108">
+☎ Zavolat
+</a>
+
+</div>
+
+</div>
+
+<div class="window-wrap">
+
+<div class="window"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+<div class="trust-box">
+
+<b>🛠️ Servis u vás</b>
+
+<small>
+Přijedu přímo na místo
+</small>
+
+</div>
+
+
+<div class="trust-box">
+
+<b>📍 Hradec + Pardubice</b>
+
+<small>
+Okolí do 60 km
+</small>
+
+</div>
+
+
+<div class="trust-box">
+
+<b>💰 Cena dle práce</b>
+
+<small>
+Podle rozsahu servisu
+</small>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section>
+
+<div class="container">
+
+<div class="label">
+SLUŽBY
+</div>
+
+<h2 class="section-title">
+Co pro vás můžu<br>
+zařídit.
+</h2>
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="icon">
+🪟
+</div>
+
+<h3>
+Seřízení oken
+</h3>
+
+<p>
+Seřízení a kontrola oken, aby správně dovírala, těsnila a pohodlně se používala.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">
+🔧
+</div>
+
+<h3>
+Výměna prasklých skel
+</h3>
+
+<p>
+Výměna poškozeného nebo prasklého skla v oknech a dveřích.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">
+🚪
+</div>
+
+<h3>
+HS Portal
+</h3>
+
+<p>
+Seřízení HS Portal posuvných dveří pro správný, lehký a plynulý chod.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL FEATURE -->
+
+<section class="special">
+
+<div class="container special-grid">
+
+<div>
+
+<div class="label">
+NOVINKA
+</div>
+
+<h2 class="section-title">
+Zjistěte, co vaše<br>
+okna potřebují.
+</h2>
+
+<p class="special-text">
+Jednoduchý interaktivní nástroj, který vám pomůže vybrat vhodný typ servisu.
+</p>
+
+<button class="special-button"
+onclick="startTool()">
+
+Spustit →
+
+</button>
+
+</div>
+
+
+<div class="special-box"
+id="specialBox">
+
+<div>
+
+<h3>
+Připraveno
+</h3>
+
+<p style="margin-top:10px;color:#aebbc3;">
+Klikněte na tlačítko.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="dark">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="label">
+OKNA KOLEK
+</div>
+
+<h2 class="section-title">
+Servis, který
+přijede k vám.
+</h2>
+
+<p class="about-text">
+Provádím servis oken a dveří v oblasti Hradce Králové, Pardubic a okolí do přibližně 60 km.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+Potřebujete servis?
+</h3>
+
+<p class="about-text">
+Ozvěte se a domluvíme se na dalším postupu.
+</p>
+
+
+<div class="contact-row">
+
+<small>
+Kontakt
+</small>
+
+<b>
+Miroslav Kolek
+</b>
+
+</div>
+
+
+<div class="contact-row">
+
+<small>
+Telefon
+</small>
+
+<b>
+<a href="tel:+420792316108">
+792 316 108
+</a>
+</b>
+
+</div>
+
+
+<div class="contact-row">
+
+<small>
+E-mail
+</small>
+
+<b>
+<a href="mailto:tobias.kolek@outlook.com">
+tobias.kolek@outlook.com
+</a>
+</b>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section id="objednavka">
+
+<div class="container order-grid">
+
+<div>
+
+<div class="label">
+OBJEDNÁVKA
+</div>
+
+<h2 class="section-title">
+Objednejte
+servis.
+</h2>
+
+<p class="about-text">
+Vyplňte krátký formulář a popište, co potřebujete vyřešit.
+</p>
+
+
+<div class="note">
+
+<b>💡 Jak to funguje?</b>
+
+<br><br>
+
+Vyplníte objednávku → ozvu se vám → domluvíme termín → provedu servis.
+
+</div>
+
+</div>
+
+
+<div class="form">
+
+<form
+action="https://formsubmit.co/tobias.kolek@outlook.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="Nová objednávka – OKNA KOLEK"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<div class="fields">
+
+
+<div class="field">
+
+<label>
+Jméno a příjmení
+</label>
+
+<input
+type="text"
+name="Jméno"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Telefon
+</label>
+
+<input
+type="tel"
+name="Telefon"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+E-mail
+</label>
+
+<input
+type="email"
+name="E-mail"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Město / obec
+</label>
+
+<input
+type="text"
+name="Město"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Jaký servis potřebujete?
+</label>
+
+<select
+name="Služba"
+required
+>
+
+<option value="">
+Vyberte službu
+</option>
+
+<option>
+Seřízení oken
+</option>
+
+<option>
+Výměna prasklého skla
+</option>
+
+<option>
+Seřízení HS Portal posuvných dveří
+</option>
+
+<option>
+Jiný servis
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Popis problému
+</label>
+
+<textarea
+name="Popis"
+placeholder="Napište například kolik máte oken nebo co je potřeba opravit..."
+></textarea>
+
+</div>
+
+</div>
+
+
+<button
+class="btn btn-white submit"
+type="submit">
+
+Odeslat objednávku →
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<b>
+OKNA KOLEK
+</b>
+
+<a href="tel:+420792316108">
+792 316 108
+</a>
+
+</div>
+
+</footer>
+
+
+<!-- INTERACTIVE FUNCTION -->
+
+<script>
+
+function startTool(){
+
+const box=document.getElementById("specialBox");
+
+box.innerHTML=`
+
+<div style="width:100%;">
+
+<h3 style="font-size:28px;margin-bottom:25px;">
+Rychlá kontrola
+</h3>
+
+<p style="color:#b7c4cc;margin-bottom:20px;">
+Co vás trápí?
+</p>
+
+<div style="
+display:grid;
+gap:10px;
+">
+
+<button onclick="result('window')"
+style="
+padding:14px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.07);
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+">
+Okno špatně dovírá
+</button>
+
+<button onclick="result('glass')"
+style="
+padding:14px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.07);
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+">
+Prasklé sklo
+</button>
+
+<button onclick="result('door')"
+style="
+padding:14px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.07);
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+">
+HS Portal nejde správně
+</button>
+
+</div>
+
+</div>
+`;
+
+}
+
+
+function result(type){
+
+const box=document.getElementById("specialBox");
+
+let title="";
+let text="";
+
+if(type==="window"){
+
+title="Pravděpodobně potřebujete seřízení";
+
+text="Pokud okno špatně dovírá nebo se hůře ovládá, může pomoci odborné seřízení.";
+
+}
+
+if(type==="glass"){
+
+title="Pravděpodobně potřebujete výměnu skla";
+
+text="Prasklé nebo poškozené sklo je vhodné řešit jeho výměnou.";
+
+}
+
+if(type==="door"){
+
+title="Může být potřeba seřízení HS Portal";
+
+text="Pokud posuvné dveře drhnou, špatně dovírají nebo se hůře ovládají, může pomoci seřízení.";
+
+}
+
+box.innerHTML=`
+
+<div>
+
+<div style="font-size:45px;margin-bottom:15px;">
+✓
+</div>
+
+<h3 style="font-size:25px;margin-bottom:12px;">
+${title}
+</h3>
+
+<p style="color:#b7c4cc;line-height:1.6;">
+${text}
+</p>
+
+<a href="#objednavka"
+style="
+display:inline-block;
+margin-top:22px;
+padding:13px 18px;
+background:white;
+color:#101820;
+border-radius:11px;
+font-weight:bold;
+">
+Objednat servis →
+</a>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
