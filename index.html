@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+
+<meta name="google-site-verification" content="-ItyTz9ndQcD2tNTzjO7nH5OtPvdb7GDva7fr8W3Ei4" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OKNA KOLEK — Servis oken a dveří</title>
+
+<meta name="description" content="OKNA KOLEK — servis oken a dveří, seřízení oken, výměna skel a seřízení HS Portal. Hradec Králové, Pardubice a okolí do 60 km.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+color:#111820;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+font-family:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+padding:17px 0;
+transition:.35s;
+}
+
+header.scrolled{
+background:rgba(7,13,20,.86);
+backdrop-filter:blur(20px);
+box-shadow:0 10px 40px rgba(0,0,0,.15);
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-size:19px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.logo-icon{
+width:37px;
+height:37px;
+border-radius:11px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,#5de0ff,#766cff);
+box-shadow:0 0 30px rgba(93,224,255,.2);
+}
+
+.logo-icon span{
+width:17px;
+height:21px;
+border:2px solid white;
+border-radius:3px;
+}
+
+.nav-buttons{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-btn{
+color:white;
+padding:11px 16px;
+border-radius:12px;
+font-weight:700;
+font-size:13px;
+transition:.25s;
+}
+
+.nav-btn:hover{
+background:rgba(255,255,255,.08);
+}
+
+.nav-btn.main{
+background:white;
+color:#111820;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+color:white;
+
+background:
+radial-gradient(circle at 10% 20%,rgba(50,211,255,.20),transparent 28%),
+radial-gradient(circle at 90% 70%,rgba(112,78,255,.22),transparent 32%),
+linear-gradient(135deg,#05080d,#0d1824,#12172b);
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.045);
+right:-300px;
+top:-280px;
+animation:rotate 30s linear infinite;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:450px;
+height:450px;
+border-radius:50%;
+border:1px solid rgba(87,218,255,.06);
+left:-260px;
+bottom:-260px;
+animation:rotate 24s linear infinite reverse;
+}
+
+@keyframes rotate{
+to{
+transform:rotate(360deg);
+}
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:60px;
+align-items:center;
+padding-top:80px;
+position:relative;
+z-index:2;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:9px;
+padding:9px 14px;
+border-radius:50px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.13);
+font-size:10px;
+font-weight:900;
+letter-spacing:1.7px;
+animation:fadeUp .8s ease;
+}
+
+.dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:#5de6a7;
+box-shadow:0 0 15px #5de6a7;
+}
+
+.hero h1{
+font-size:clamp(48px,7vw,84px);
+line-height:.94;
+letter-spacing:-6px;
+margin:26px 0;
+animation:fadeUp .8s .1s both;
+}
+
+.gradient{
+background:linear-gradient(90deg,#fff,#63ddff,#9c8bff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+max-width:610px;
+font-size:18px;
+line-height:1.8;
+color:#aebbc5;
+animation:fadeUp .8s .2s both;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+margin-top:32px;
+animation:fadeUp .8s .3s both;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 22px;
+border-radius:14px;
+font-weight:900;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.white{
+background:white;
+color:#101820;
+box-shadow:0 15px 40px rgba(255,255,255,.08);
+}
+
+.outline{
+border:1px solid rgba(255,255,255,.16);
+background:rgba(255,255,255,.04);
+color:white;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* =========================
+   HERO WINDOW
+========================= */
+
+.visual{
+height:520px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.glow{
+position:absolute;
+width:330px;
+height:330px;
+border-radius:50%;
+background:#4fd7ff;
+filter:blur(100px);
+opacity:.14;
+animation:pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.25);
+opacity:.25;
+}
+
+}
+
+.window{
+width:290px;
+height:405px;
+position:relative;
+
+border:2px solid rgba(255,255,255,.3);
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.15),
+rgba(255,255,255,.025)
+);
+
+backdrop-filter:blur(8px);
+
+box-shadow:
+0 50px 100px rgba(0,0,0,.5),
+inset 0 0 50px rgba(255,255,255,.03);
+
+transform:perspective(900px) rotateY(-14deg);
+
+animation:windowFloat 5s ease-in-out infinite;
+}
+
+.window::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+bottom:0;
+border-left:2px solid rgba(255,255,255,.22);
+}
+
+.window::after{
+content:"";
+position:absolute;
+top:50%;
+left:0;
+right:0;
+border-top:2px solid rgba(255,255,255,.22);
+}
+
+@keyframes windowFloat{
+
+50%{
+transform:
+perspective(900px)
+rotateY(-8deg)
+translateY(-15px);
+}
+
+}
+
+.float-card{
+position:absolute;
+padding:14px 17px;
+border-radius:14px;
+
+background:rgba(9,17,25,.75);
+border:1px solid rgba(255,255,255,.13);
+
+backdrop-filter:blur(18px);
+
+font-size:12px;
+font-weight:800;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.card1{
+left:0;
+top:100px;
+animation:smallFloat 4s ease-in-out infinite;
+}
+
+.card2{
+right:0;
+bottom:95px;
+animation:smallFloat 4.5s .5s ease-in-out infinite;
+}
+
+@keyframes smallFloat{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+background:white;
+border-bottom:1px solid #e5eaee;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+.stat{
+padding:28px;
+text-align:center;
+border-right:1px solid #e5eaee;
+}
+
+.stat:last-child{
+border:none;
+}
+
+.stat strong{
+display:block;
+font-size:16px;
+}
+
+.stat span{
+display:block;
+margin-top:5px;
+font-size:12px;
+color:#7b8790;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+padding:110px 0;
+}
+
+.label{
+font-size:10px;
+font-weight:900;
+letter-spacing:2px;
+color:#77858e;
+margin-bottom:14px;
+}
+
+.title{
+font-size:clamp(42px,5vw,65px);
+line-height:1;
+letter-spacing:-4px;
+margin-bottom:50px;
+}
+
+
+/* =========================
+   FLIP SERVICES
+========================= */
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+perspective:1200px;
+}
+
+.flip-card{
+height:370px;
+cursor:pointer;
+perspective:1200px;
+}
+
+.flip-inner{
+width:100%;
+height:100%;
+position:relative;
+
+transform-style:preserve-3d;
+
+transition:
+transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.flip-card.active .flip-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+position:absolute;
+inset:0;
+
+border-radius:27px;
+
+overflow:hidden;
+
+backface-visibility:hidden;
+-webkit-backface-visibility:hidden;
+}
+
+.flip-front{
+background:white;
+border:1px solid #e3e8ec;
+padding:32px;
+
+transition:.3s;
+}
+
+.flip-card:hover .flip-front{
+box-shadow:0 30px 70px rgba(10,20,30,.1);
+}
+
+.flip-back{
+transform:rotateY(180deg);
+
+padding:30px;
+
+display:flex;
+align-items:flex-end;
+
+background:
+linear-gradient(
+135deg,
+#09121b,
+#1b3445
+);
+
+color:white;
+}
+
+.flip-back::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(
+circle at 20% 20%,
+rgba(87,219,255,.22),
+transparent 35%
+);
+
+}
+
+.flip-hint{
+position:absolute;
+top:20px;
+right:20px;
+
+font-size:10px;
+font-weight:900;
+letter-spacing:.7px;
+
+color:#929da5;
+}
+
+.service-number{
+font-size:11px;
+font-weight:900;
+color:#9aa4ab;
+}
+
+.icon{
+width:60px;
+height:60px;
+
+margin:48px 0 25px;
+
+display:grid;
+place-items:center;
+
+border-radius:17px;
+
+font-size:26px;
+
+background:
+linear-gradient(
+135deg,
+#101820,
+#344957
+);
+
+color:white;
+
+box-shadow:
+0 15px 35px rgba(10,20,30,.15);
+}
+
+.flip-front h3{
+font-size:22px;
+margin-bottom:12px;
+}
+
+.flip-front p{
+font-size:14px;
+line-height:1.8;
+color:#697680;
+}
+
+.back-symbol{
+position:absolute;
+inset:0;
+
+display:grid;
+place-items:center;
+
+font-size:120px;
+
+opacity:.13;
+}
+
+.back-content{
+position:relative;
+z-index:2;
+}
+
+.back-content small{
+font-size:10px;
+font-weight:900;
+letter-spacing:2px;
+color:#91a8b5;
+}
+
+.back-content h3{
+font-size:28px;
+margin:8px 0 10px;
+}
+
+.back-content p{
+font-size:13px;
+line-height:1.7;
+color:#c1ccd3;
+}
+
+
+/* =========================
+   INTERACTIVE
+========================= */
+
+.interactive{
+background:
+radial-gradient(circle at 15% 20%,rgba(50,213,255,.14),transparent 27%),
+radial-gradient(circle at 85% 80%,rgba(116,83,255,.15),transparent 30%),
+linear-gradient(135deg,#070c12,#111e2b);
+
+color:white;
+}
+
+.interactive-grid{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:60px;
+align-items:center;
+}
+
+.interactive h2{
+font-size:clamp(42px,5vw,65px);
+line-height:1;
+letter-spacing:-4px;
+margin-bottom:25px;
+}
+
+.interactive-copy{
+font-size:17px;
+line-height:1.8;
+color:#abb9c3;
+}
+
+.launch{
+margin-top:30px;
+
+padding:17px 24px;
+
+border:0;
+border-radius:14px;
+
+background:white;
+color:#101820;
+
+font-weight:900;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.launch:hover{
+transform:translateY(-4px) scale(1.02);
+}
+
+.check-box{
+min-height:410px;
+
+padding:35px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,.13);
+
+background:rgba(255,255,255,.055);
+
+backdrop-filter:blur(20px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+}
+
+.check-box button{
+width:100%;
+
+padding:15px;
+
+margin-top:10px;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.05);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.2s;
+}
+
+.check-box button:hover{
+background:rgba(255,255,255,.13);
+transform:translateY(-2px);
+}
+
+.progress{
+height:6px;
+
+background:rgba(255,255,255,.1);
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin:20px 0;
+}
+
+.progress-bar{
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#5ddcff,
+#9a88ff
+);
+
+transition:.5s;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+background:#f5f7fa;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about-text{
+font-size:17px;
+line-height:1.9;
+color:#68757e;
+}
+
+.contact-card{
+padding:35px;
+
+border-radius:28px;
+
+background:#101820;
+
+color:white;
+
+box-shadow:
+0 30px 70px rgba(10,20,30,.15);
+}
+
+.contact-card h3{
+font-size:28px;
+margin-bottom:25px;
+}
+
+.contact-row{
+padding:17px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,.1);
+}
+
+.contact-row:last-child{
+border:none;
+}
+
+.contact-row small{
+display:block;
+
+font-size:10px;
+
+letter-spacing:1.5px;
+
+color:#84919a;
+
+margin-bottom:5px;
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+.order{
+background:white;
+}
+
+.order-grid{
+display:grid;
+grid-template-columns:.7fr 1.3fr;
+gap:60px;
+align-items:start;
+}
+
+.steps{
+margin-top:35px;
+
+display:grid;
+
+gap:15px;
+}
+
+.step{
+display:flex;
+align-items:center;
+
+gap:12px;
+
+font-size:13px;
+
+font-weight:800;
+}
+
+.step-number{
+width:32px;
+height:32px;
+
+display:grid;
+place-items:center;
+
+background:#101820;
+
+color:white;
+
+border-radius:10px;
+}
+
+.form{
+padding:35px;
+
+border-radius:28px;
+
+background:#f7f9fa;
+
+border:
+1px solid #e2e7eb;
+
+box-shadow:
+0 25px 60px rgba(10,20,30,.06);
+}
+
+.fields{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:17px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+gap:7px;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+.field label{
+font-size:12px;
+font-weight:800;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+
+padding:15px;
+
+border:
+1px solid #dce2e6;
+
+border-radius:12px;
+
+background:white;
+
+outline:none;
+
+font-size:14px;
+
+transition:.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:#6574ff;
+
+box-shadow:
+0 0 0 4px rgba(101,116,255,.08);
+}
+
+.field textarea{
+min-height:140px;
+
+resize:vertical;
+}
+
+.submit{
+width:100%;
+
+border:0;
+
+cursor:pointer;
+
+margin-top:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:#070c11;
+
+color:white;
+
+padding:35px 0;
+}
+
+.footer{
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+}
+
+.footer b{
+letter-spacing:1px;
+}
+
+.footer span{
+font-size:13px;
+color:#9ca8b0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+.nav-buttons .nav-btn:first-child{
+display:none;
+}
+
+.hero-content{
+grid-template-columns:1fr;
+padding-top:100px;
+}
+
+.visual{
+height:390px;
+}
+
+.window{
+width:230px;
+height:320px;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.stat{
+border-right:0;
+border-bottom:1px solid #e5eaee;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.interactive-grid,
+.about-grid,
+.order-grid{
+grid-template-columns:1fr;
+}
+
+.fields{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.footer{
+flex-direction:column;
+gap:12px;
+text-align:center;
+}
+
+.hero h1{
+letter-spacing:-4px;
+}
+
+.title,
+.interactive h2{
+letter-spacing:-3px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header id="header">
+
+<div class="container">
+
+<nav>
+
+<a href="#" class="logo">
+
+<div class="logo-icon">
+<span></span>
+</div>
+
+OKNA KOLEK
+
+</a>
+
+
+<div class="nav-buttons">
+
+<a href="#sluzby" class="nav-btn">
+Služby
+</a>
+
+<a href="#objednavka" class="nav-btn main">
+Objednat servis
+</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div>
+
+<div class="badge">
+
+<span class="dot"></span>
+
+SERVIS OKEN A DVEŘÍ
+
+</div>
+
+
+<h1>
+
+Aby vaše okna
+
+<span class="gradient">
+fungovala správně.
+</span>
+
+</h1>
+
+
+<p>
+
+Seřízení oken, kontrola těsnění, výměna prasklých skel a seřízení HS Portal posuvných dveří. Hradec Králové, Pardubice a okolí do 60 km.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#objednavka" class="btn white">
+Objednat servis →
+</a>
+
+<a href="tel:+420737180350" class="btn outline">
+☎ +420 737 180 350
+</a>
+
+</div>
+
+</div>
+
+
+<div class="visual">
+
+<div class="glow"></div>
+
+<div class="window"></div>
+
+<div class="float-card card1">
+🛠️ Servis u vás
+</div>
+
+<div class="float-card card2">
+📍 Okolí do 60 km
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+
+<strong>
+Hradec Králové
+</strong>
+
+<span>
+a okolí
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+Pardubice
+</strong>
+
+<span>
+a okolí
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+Do 60 km
+</strong>
+
+<span>
+oblast servisu
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="sluzby">
+
+<div class="container">
+
+<div class="label">
+SLUŽBY
+</div>
+
+
+<h2 class="title">
+
+Co pro vás
+<br>
+vyřešíme.
+
+</h2>
+
+
+<div class="services">
+
+
+<!-- CARD 1 -->
+
+<div class="flip-card"
+onclick="this.classList.toggle('active')">
+
+<div class="flip-inner">
+
+
+<div class="flip-front">
+
+<div class="flip-hint">
+KLIKNOUT ↻
+</div>
+
+<div class="service-number">
+01 / OKNA
+</div>
+
+<div class="icon">
+🪟
+</div>
+
+<h3>
+Seřízení oken
+</h3>
+
+<p>
+Okno špatně dovírá, drhne nebo se hůře ovládá? Správným seřízením lze jeho chod výrazně zlepšit.
+</p>
+
+</div>
+
+
+<div class="flip-back">
+
+<div class="back-symbol">
+🪟
+</div>
+
+<div class="back-content">
+
+<small>
+OKNA KOLEK
+</small>
+
+<h3>
+Seřízení oken
+</h3>
+
+<p>
+Kontrola a seřízení oken pro pohodlnější otevírání, zavírání a správný chod.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="flip-card"
+onclick="this.classList.toggle('active')">
+
+<div class="flip-inner">
+
+
+<div class="flip-front">
+
+<div class="flip-hint">
+KLIKNOUT ↻
+</div>
+
+<div class="service-number">
+02 / SKLO
+</div>
+
+<div class="icon">
+◇
+</div>
+
+<h3>
+Výměna skel
+</h3>
+
+<p>
+Prasklé nebo poškozené sklo v okně či dveřích? Domluvíme vhodné řešení a výměnu.
+</p>
+
+</div>
+
+
+<div class="flip-back">
+
+<div class="back-symbol">
+◇
+</div>
+
+<div class="back-content">
+
+<small>
+OKNA KOLEK
+</small>
+
+<h3>
+Výměna skla
+</h3>
+
+<p>
+Řešení prasklých nebo poškozených skel podle konkrétní situace.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="flip-card"
+onclick="this.classList.toggle('active')">
+
+<div class="flip-inner">
+
+
+<div class="flip-front">
+
+<div class="flip-hint">
+KLIKNOUT ↻
+</div>
+
+<div class="service-number">
+03 / HS PORTAL
+</div>
+
+<div class="icon">
+↔
+</div>
+
+<h3>
+HS Portal
+</h3>
+
+<p>
+Seřízení velkých posuvných dveří pro lehčí, plynulejší a pohodlnější používání.
+</p>
+
+</div>
+
+
+<div class="flip-back">
+
+<div class="back-symbol">
+↔
+</div>
+
+<div class="back-content">
+
+<small>
+OKNA KOLEK
+</small>
+
+<h3>
+HS Portal
+</h3>
+
+<p>
+Seřízení velkých posuvných dveří a kontrola jejich správného chodu.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERACTIVE -->
+
+<section class="interactive">
+
+<div class="container interactive-grid">
+
+<div>
+
+<div class="label"
+style="color:#80919c">
+
+INTERAKTIVNÍ KONTROLA
+
+</div>
+
+
+<h2>
+
+Zjistěte,
+
+co vaše okno
+
+potřebuje.
+
+</h2>
+
+
+<p class="interactive-copy">
+
+Odpovězte na několik jednoduchých otázek a lépe zjistíte, co může být potřeba zkontrolovat.
+
+</p>
+
+
+<button class="launch"
+onclick="startCheck()">
+
+Spustit kontrolu →
+
+</button>
+
+</div>
+
+
+<div class="check-box"
+id="checkBox">
+
+<div>
+
+<div style="font-size:60px">
+◈
+</div>
+
+<h3 style="font-size:27px;margin-top:15px">
+
+Připraveno
+
+</h3>
+
+<p style="margin-top:10px">
+
+Klikněte na tlačítko a začněte.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="label">
+OKNA KOLEK
+</div>
+
+
+<h2 class="title">
+
+Servis přímo
+<br>
+u vás.
+
+</h2>
+
+
+<p class="about-text">
+
+Přijedu přímo na místo a společně zjistíme, co je potřeba udělat. Cena se odvíjí od konkrétní práce a jejího rozsahu.
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+Kontakt
+</h3>
+
+
+<div class="contact-row">
+
+<small>
+JMÉNO
+</small>
+
+<b>
+Miroslav Kolek
+</b>
+
+</div>
+
+
+<div class="contact-row">
+
+<small>
+TELEFON
+</small>
+
+<b>
+
+<a href="tel:+420737180350">
+
++420 737 180 350
+
+</a>
+
+</b>
+
+</div>
+
+
+<div class="contact-row">
+
+<small>
+E-MAIL
+</small>
+
+<b>
+
+<a href="mailto:miroslav.kolek@outlook.com">
+
+miroslav.kolek@outlook.com
+
+</a>
+
+</b>
+
+</div>
+
+
+<div class="contact-row">
+
+<small>
+OBLAST
+</small>
+
+<b>
+
+Hradec Králové • Pardubice • okolí 60 km
+
+</b>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section class="order"
+id="objednavka">
+
+<div class="container order-grid">
+
+
+<div>
+
+<div class="label">
+OBJEDNÁVKA
+</div>
+
+
+<h2 class="title">
+
+Objednejte
+<br>
+servis.
+
+</h2>
+
+
+<p class="about-text">
+
+Vyplňte formulář a popište, co potřebujete vyřešit. Ozvu se vám a domluvíme další postup.
+
+</p>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">
+1
+</div>
+
+Vyplníte formulář
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+Ozvu se vám
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+3
+</div>
+
+Domluvíme termín
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="form">
+
+
+<form
+action="https://formsubmit.co/miroslav.kolek@outlook.com"
+method="POST"
+>
+
+
+<input
+type="hidden"
+name="_subject"
+value="Nová objednávka — OKNA KOLEK"
+>
+
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<div class="fields">
+
+
+<div class="field">
+
+<label>
+Jméno a příjmení
+</label>
+
+<input
+type="text"
+name="Jméno"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Telefon
+</label>
+
+<input
+type="tel"
+name="Telefon"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+E-mail
+</label>
+
+<input
+type="email"
+name="E-mail"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Město / obec
+</label>
+
+<input
+type="text"
+name="Město"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Jaký servis potřebujete?
+</label>
+
+
+<select
+name="Služba"
+required
+>
+
+<option value="">
+Vyberte službu
+</option>
+
+<option>
+Seřízení oken
+</option>
+
+<option>
+Kontrola těsnění / netěsnící okno
+</option>
+
+<option>
+Výměna prasklého skla
+</option>
+
+<option>
+Seřízení HS Portal posuvných dveří
+</option>
+
+<option>
+Jiný problém
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Popis problému
+</label>
+
+
+<textarea
+name="Popis problému"
+placeholder="Například: okno netěsní, špatně dovírá, drhne, je prasklé sklo..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn white submit"
+>
+
+Odeslat objednávku →
+
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<b>
+OKNA KOLEK
+</b>
+
+<span>
+
++420 737 180 350
+•
+Hradec
+•
+Pardubice
+•
+okolí 60 km
+
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* HEADER */
+
+const header=document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>30){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+
+/* INTERAKTIVNÍ KONTROLA */
+
+let question=0;
+
+
+const questions=[
+
+{
+text:"Cítíte kolem okna průvan nebo máte pocit, že netěsní?",
+answers:[
+["Ano","seal"],
+["Ne","next"]
+]
+},
+
+{
+text:"Jde okno hůře otevřít, zavřít nebo se hůře ovládá?",
+answers:[
+["Ano","adjust"],
+["Ne","next"]
+]
+},
+
+{
+text:"Je sklo prasklé nebo poškozené?",
+answers:[
+["Ano","glass"],
+["Ne","next"]
+]
+},
+
+{
+text:"Týká se problém velkých posuvných HS Portal dveří?",
+answers:[
+["Ano","portal"],
+["Ne","other"]
+]
+}
+
+];
+
+
+function startCheck(){
+
+question=0;
+
+showQuestion();
+
+}
+
+
+function showQuestion(){
+
+const box=document.getElementById("checkBox");
+
+const q=questions[question];
+
+
+let html=`
+
+<div style="width:100%">
+
+<div style="
+font-size:10px;
+letter-spacing:2px;
+color:#82929d;
+font-weight:800;
+">
+
+OTÁZKA ${question+1} / ${questions.length}
+
+</div>
+
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:${question/questions.length*100}%">
+</div>
+
+</div>
+
+
+<h3 style="
+font-size:24px;
+line-height:1.4;
+margin-bottom:20px">
+
+${q.text}
+
+</h3>
+
+`;
+
+
+q.answers.forEach(answer=>{
+
+html+=`
+
+<button onclick="answer('${answer[1]}')">
+
+${answer[0]}
+
+</button>
+
+`;
+
+});
+
+
+html+=`
+
+</div>
+
+`;
+
+
+box.innerHTML=html;
+
+}
+
+
+function answer(type){
+
+if(type==="next"){
+
+question++;
+
+if(question>=questions.length){
+
+showResult("other");
+
+}else{
+
+showQuestion();
+
+}
+
+return;
+
+}
+
+showResult(type);
+
+}
+
+
+function showResult(type){
+
+const box=document.getElementById("checkBox");
+
+let title="";
+let text="";
+let icon="";
+
+
+if(type==="seal"){
+
+icon="◌";
+
+title="Možný problém s těsněním";
+
+text="Průvan nebo horší těsnost může souviset s těsněním či nastavením okna.";
+
+}
+
+
+else if(type==="adjust"){
+
+icon="⚙";
+
+title="Možné seřízení";
+
+text="Horší ovládání nebo zavírání může souviset s nastavením kování.";
+
+}
+
+
+else if(type==="glass"){
+
+icon="◇";
+
+title="Výměna skla";
+
+text="Prasklé nebo poškozené sklo je vhodné řešit jeho výměnou.";
+
+}
+
+
+else if(type==="portal"){
+
+icon="↔";
+
+title="HS Portal";
+
+text="U posuvných dveří může být vhodné odborné seřízení.";
+
+}
+
+
+else{
+
+icon="◎";
+
+title="Doporučujeme kontrolu";
+
+text="Pokud si nejste jistí, popište problém v objednávce.";
+
+}
+
+
+box.innerHTML=`
+
+<div>
+
+<div style="
+font-size:60px;
+margin-bottom:15px">
+
+${icon}
+
+</div>
+
+
+<h3 style="
+font-size:27px;
+margin-bottom:12px">
+
+${title}
+
+</h3>
+
+
+<p style="
+color:#aebbc5;
+line-height:1.7">
+
+${text}
+
+</p>
+
+
+<a
+href="#objednavka"
+style="
+display:inline-flex;
+margin-top:25px;
+padding:14px 20px;
+background:white;
+color:#101820;
+border-radius:12px;
+font-weight:900">
+
+Objednat servis →
+
+</a>
+
+
+<button onclick="startCheck()">
+
+Spustit znovu
+
+</button>
+
+
+</div>
+
+`;
+
+}
+
+</script>
+
+
+</body>
+</html>
