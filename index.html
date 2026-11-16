@@ -1,1594 +1,1194 @@
+
 <!DOCTYPE html>
 <html lang="cs">
-<head> <meta property="og:title" content="OKNA KOLEK | Servis oken a dveří">
-<meta property="og:description" content="Servis a seřízení oken a dveří v Hradci Králové, Pardubicích a okolí do 60 km.">
-<meta property="og:image" content="https://9tdxmgczzx-hub.github.io/kolekokna/IMG_4772.jpeg">
-<meta property="og:url" content="https://9tdxmgczzx-hub.github.io/kolekokna/">
-<meta property="og:type" content="website">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07192c">
+  <meta name="google-site-verification"
+        content="-ItyTz9ndQcD2tNTzjO7nH5OtPvdb7GDva7fr8W3Ei4">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OKNA KOLEK | Servis oken a dveří">
-<meta name="twitter:description" content="Servis a seřízení oken a dveří v Hradci Králové, Pardubicích a okolí do 60 km.">
-<meta name="twitter:image" content="https://9tdxmgczzx-hub.github.io/kolekokna/IMG_4772.jpeg"> 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="-ItyTz9ndQcD2tNTzjO7nH5OtPvdb7GDva7fr8W3Ei4">
-<title>OKNA KOLEK | Servis oken Hradec Králové a Pardubice</title>
-<meta name="description" content="OKNA KOLEK – servis a seřízení oken, výměna skel, servis HS Portal a kontrola těsnění v Hradci Králové, Pardubicích a okolí.">
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-html{
-    scroll-behavior:smooth;
-}
-body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:#fff;
-    color:#18232d;
-    line-height:1.6;
-}
-a{
-    color:inherit;
-    text-decoration:none;
-}
-button,input,select,textarea{
-    font:inherit;
-}
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-/* HEADER */
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:#fff;
-    border-bottom:1px solid transparent;
-    transition:.25s;
-}
-header.scrolled{
-    border-color:#e5e9ed;
-    box-shadow:0 8px 30px rgba(20,35,50,.08);
-}
-nav{
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-.logo{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    font-size:18px;
-    font-weight:900;
-    letter-spacing:.5px;
-}
-.logo-mark{
-    width:38px;
-    height:38px;
-    border:2px solid #1769aa;
-    display:grid;
-    place-items:center;
-    position:relative;
-}
-.logo-mark:before,
-.logo-mark:after{
-    content:"";
-    position:absolute;
-    background:#1769aa;
-}
-.logo-mark:before{
-    width:2px;
-    height:22px;
-}
-.logo-mark:after{
-    height:2px;
-    width:22px;
-}
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-.nav-links a{
-    font-size:14px;
-    font-weight:700;
-    color:#53616c;
-}
-.nav-links a:hover{
-    color:#1769aa;
-}
-.nav-call{
-    padding:11px 17px;
-    border:1px solid #1769aa;
-    color:#1769aa !important;
-    border-radius:6px;
-}
-.nav-order{
-    padding:12px 18px;
-    background:#1769aa;
-    color:white !important;
-    border-radius:6px;
-}
-.nav-order:hover,
-.primary:hover{
-    background:#0f578e;
-}
-/* HERO */
-.hero{
-    padding:145px 0 95px;
-    background:#f4f7f9;
-    border-bottom:1px solid #e5eaee;
-}
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:70px;
-    align-items:center;
-}
-.eyebrow{
-    color:#1769aa;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-    margin-bottom:18px;
-}
-.hero h1{
-    max-width:680px;
-    font-size:clamp(43px,6vw,70px);
-    line-height:1.04;
-    letter-spacing:-2.8px;
-    margin-bottom:24px;
-}
-.hero h1 span{
-    color:#1769aa;
-}
-.hero-text{
-    max-width:620px;
-    color:#596772;
-    font-size:18px;
-    line-height:1.75;
-}
-.hero-actions{
-    display:flex;
-    gap:12px;
-    margin-top:32px;
-}
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:48px;
-    padding:0 21px;
-    border-radius:6px;
-    border:1px solid transparent;
-    font-size:14px;
-    font-weight:800;
-    cursor:pointer;
-    transition:.2s;
-}
-.primary{
-    background:#1769aa;
-    color:white;
-}
-.secondary{
-    background:white;
-    border-color:#d8e0e6;
-    color:#263640;
-}
-.secondary:hover{
-    border-color:#1769aa;
-    color:#1769aa;
-}
-/* HERO VISUAL */
-.hero-photo{
-    min-height:440px;
-    position:relative;
-    overflow:hidden;
-    background:
-        linear-gradient(rgba(20,40,55,.08),rgba(20,40,55,.08)),
-        #dce5ea;
-    border-radius:8px;
-}
-.window-demo{
-    position:absolute;
-    width:310px;
-    height:350px;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    background:#eef3f5;
-    border:15px solid #59666d;
-    box-shadow:0 20px 50px rgba(20,35,45,.2);
-}
-.window-demo:before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:0;
-    bottom:0;
-    width:9px;
-    transform:translateX(-50%);
-    background:#59666d;
-}
-.window-demo:after{
-    content:"";
-    position:absolute;
-    top:50%;
-    left:0;
-    right:0;
-    height:9px;
-    transform:translateY(-50%);
-    background:#59666d;
-}
-.visual-info{
-    position:absolute;
-    left:22px;
-    bottom:22px;
-    right:22px;
-    background:white;
-    padding:17px 19px;
-    border-radius:6px;
-    box-shadow:0 10px 30px rgba(20,35,45,.12);
-}
-.visual-info strong{
-    display:block;
-    font-size:15px;
-}
-.visual-info span{
-    display:block;
-    margin-top:3px;
-    color:#6d7982;
-    font-size:12px;
-}
-/* TRUST BAR */
-.trust{
-    border-bottom:1px solid #e5eaee;
-    background:white;
-}
-.trust-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-}
-.trust-item{
-    padding:25px;
-    border-right:1px solid #e5eaee;
-}
-.trust-item:last-child{
-    border-right:0;
-}
-.trust-item strong{
-    display:block;
-    font-size:14px;
-}
-.trust-item span{
-    display:block;
-    color:#7a858d;
-    font-size:12px;
-    margin-top:3px;
-}
-/* GENERAL */
-section{
-    padding:95px 0;
-}
-.section-head{
-    max-width:700px;
-    margin-bottom:45px;
-}
-.section-label{
-    color:#1769aa;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-    margin-bottom:12px;
-}
-.section-title{
-    font-size:clamp(35px,5vw,53px);
-    line-height:1.08;
-    letter-spacing:-1.8px;
-    margin-bottom:15px;
-}
-.section-text{
-    color:#697781;
-    font-size:16px;
-}
-/* SERVICES */
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-.service{
-    border:1px solid #e1e7eb;
-    background:white;
-    border-radius:7px;
-    padding:30px;
-    transition:.2s;
-}
-.service:hover{
-    border-color:#b9cedc;
-    box-shadow:0 15px 35px rgba(25,55,75,.08);
-    transform:translateY(-3px);
-}
-.service-number{
-    color:#9aa5ac;
-    font-size:11px;
-    font-weight:900;
-}
-.service-icon{
-    width:52px;
-    height:52px;
-    display:grid;
-    place-items:center;
-    margin:27px 0 20px;
-    border-radius:6px;
-    background:#edf5fa;
-    color:#1769aa;
-    font-size:24px;
-}
-.service h3{
-    font-size:21px;
-    margin-bottom:10px;
-}
-.service p{
-    color:#697781;
-    font-size:14px;
-    line-height:1.75;
-}
-/* DIAGNOSTIKA */
-.diagnostic{
-    background:#172631;
-    color:white;
-}
-.diagnostic-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:65px;
-    align-items:center;
-}
-.diagnostic .section-label{
-    color:#8fc7e8;
-}
-.diagnostic .section-title{
-    color:white;
-}
-.diagnostic .section-text{
-    color:#aebbc3;
-}
-.check-box{
-    min-height:390px;
-    padding:35px;
-    background:#213540;
-    border:1px solid #334955;
-    border-radius:8px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-.check-box h3{
-    font-size:25px;
-    margin:12px 0;
-}
-.check-box p{
-    color:#b4c1c8;
-    font-size:14px;
-}
-.check-box button{
-    width:100%;
-    margin-top:10px;
-    padding:13px 15px;
-    border:1px solid #526874;
-    border-radius:5px;
-    background:#2a414d;
-    color:white;
-    cursor:pointer;
-    font-weight:700;
-}
-.check-box button:hover{
-    background:#35515f;
-}
-.progress{
-    height:5px;
-    margin:20px 0;
-    background:#334955;
-    overflow:hidden;
-    border-radius:10px;
-}
-.progress-bar{
-    height:100%;
-    background:#71b7df;
-    transition:.3s;
-}
-/* ABOUT */
-.about{
-    background:#f6f8f9;
-}
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:start;
-}
-.about-copy{
-    color:#697781;
-    font-size:16px;
-    line-height:1.85;
-}
-.contact-card{
-    background:#172631;
-    color:white;
-    border-radius:7px;
-    padding:32px;
-}
-.contact-card h3{
-    font-size:24px;
-    margin-bottom:22px;
-}
-.contact-row{
-    padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,.1);
-}
-.contact-row:last-child{
-    border-bottom:0;
-}
-.contact-row small{
-    display:block;
-    color:#91a0a9;
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:1.3px;
-    margin-bottom:4px;
-}
-.contact-row b{
-    font-size:14px;
-}
-/* GALLERY */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-}
-.gallery-card{
-    min-height:220px;
-    border-radius:7px;
-    border:1px solid #e1e7eb;
-    background:#f4f7f8;
-    display:grid;
-    place-items:center;
-    text-align:center;
-    padding:25px;
-    color:#6c7982;
-    font-size:14px;
-}
-.gallery-card strong{
-    color:#273640;
-}
-/* MAP */
-.map-section{
-    background:#f6f8f9;
-}
-.map-box{
-    min-height:300px;
-    border-radius:7px;
-    background:white;
-    border:1px solid #e1e7eb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-}
-.map-icon{
-    font-size:42px;
-    margin-bottom:12px;
-}
-.map-box h3{
-    font-size:25px;
-    margin-bottom:8px;
-}
-.map-box p{
-    max-width:520px;
-    color:#697781;
-    font-size:14px;
-}
-/* ORDER */
-.order{
-    background:white;
-}
-.order-grid{
-    display:grid;
-    grid-template-columns:.7fr 1.3fr;
-    gap:65px;
-    align-items:start;
-}
-.steps{
-    display:grid;
-    gap:15px;
-    margin-top:30px;
-}
-.step{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:14px;
-    font-weight:800;
-}
-.step-number{
-    width:31px;
-    height:31px;
-    display:grid;
-    place-items:center;
-    background:#1769aa;
-    color:white;
-    border-radius:50%;
-    font-size:12px;
-}
-.form{
-    padding:32px;
-    border:1px solid #e0e6ea;
-    border-radius:7px;
-    background:#f7f9fa;
-}
-.fields{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-}
-.field{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-}
-.full{
-    grid-column:1/-1;
-}
-.field label{
-    font-size:12px;
-    font-weight:800;
-}
-.field input,
-.field select,
-.field textarea{
-    width:100%;
-    padding:13px;
-    border:1px solid #d7dfe4;
-    border-radius:5px;
-    background:white;
-    color:#18232d;
-    outline:none;
-}
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-    border-color:#1769aa;
-    box-shadow:0 0 0 3px rgba(23,105,170,.08);
-}
-.field textarea{
-    min-height:130px;
-    resize:vertical;
-}
-.help{
-    color:#748089;
-    font-size:11px;
-    line-height:1.5;
-}
-.help-btn{
-    border:0;
-    background:none;
-    color:#1769aa;
-    text-align:left;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:800;
-}
-.help-box{
-    display:none;
-    padding:14px;
-    background:#edf4f8;
-    border-radius:5px;
-    color:#53626c;
-    font-size:12px;
-    line-height:1.6;
-}
-.help-box.show{
-    display:block;
-}
-.photo-preview{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-}
-.photo-preview img{
-    width:80px;
-    height:80px;
-    object-fit:cover;
-    border-radius:5px;
-    border:1px solid #d7dfe4;
-}
-.summary{
-    display:none;
-    margin-top:20px;
-    padding:18px;
-    border-radius:6px;
-    background:#172631;
-    color:white;
-}
-.summary.show{
-    display:block;
-}
-.summary h3{
-    margin-bottom:10px;
-}
-.summary p{
-    color:#c0cbd1;
-    font-size:13px;
-    line-height:1.7;
-}
-.success{
-    display:none;
-    margin-bottom:20px;
-    padding:18px;
-    background:#edf8f2;
-    border:1px solid #c5e8d3;
-    border-radius:6px;
-    color:#1b6340;
-    font-size:13px;
-}
-.success.show{
-    display:block;
-}
-.submit{
-    width:100%;
-    margin-top:20px;
-}
-/* FAQ */
-.faq{
-    background:#f6f8f9;
-}
-.faq-list{
-    display:grid;
-    gap:10px;
-    max-width:850px;
-}
-.faq-item{
-    background:white;
-    border:1px solid #e1e7eb;
-    border-radius:6px;
-    overflow:hidden;
-}
-.faq-question{
-    width:100%;
-    padding:19px;
-    border:0;
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    text-align:left;
-    cursor:pointer;
-    font-weight:800;
-}
-.faq-answer{
-    display:none;
-    padding:0 19px 19px;
-    color:#697781;
-    font-size:14px;
-    line-height:1.7;
-}
-.faq-item.active .faq-answer{
-    display:block;
-}
-/* FOOTER */
-footer{
-    background:#101b23;
-    color:white;
-    padding:35px 0;
-}
-.footer{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-.footer b{
-    font-size:16px;
-}
-.footer span{
-    color:#9ba9b1;
-    font-size:12px;
-}
-/* MOBILE */
-.mobile-actions{
-    display:none;
-}
-@media(max-width:850px){
-    nav{
-        min-height:68px;
+  <title>OKNA KOLEK | Servis oken a dveří</title>
+  <meta name="description"
+        content="Seřízení oken a dveří, výměna těsnění, kování a skel, servis HS Portal. Hradec Králové, Pardubice a okolí do 60 km.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #07192c;
+      --navy: #0d2945;
+      --blue: #168de2;
+      --cyan: #4ed9ef;
+      --white: #ffffff;
+      --muted: #a8bed0;
+      --light: #f3f8fc;
+      --ink: #132d45;
+      --line: #dce8f1;
+      --radius: 22px;
     }
-    .nav-links{
-        gap:7px;
+
+    * {
+      box-sizing: border-box;
     }
-    .nav-links a:not(.nav-order){
-        display:none;
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
     }
-    .nav-order{
-        padding:10px 13px;
-        font-size:12px;
+
+    body {
+      margin: 0;
+      font-family: Manrope, sans-serif;
+      background: var(--light);
+      color: var(--ink);
+      line-height: 1.65;
     }
-    .hero{
-        padding:115px 0 60px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .hero-grid,
-    .diagnostic-grid,
-    .about-grid,
-    .order-grid{
-        grid-template-columns:1fr;
+
+    button, input, select, textarea {
+      font: inherit;
     }
-    .hero-grid{
-        gap:40px;
+
+    button {
+      cursor: pointer;
     }
-    .hero h1{
-        font-size:44px;
-        letter-spacing:-2px;
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
     }
-    .hero-text{
-        font-size:16px;
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 25, 44, .96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
     }
-    .hero-actions{
-        flex-direction:column;
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
-    .hero-actions .btn{
-        width:100%;
+
+    .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
-    .hero-photo{
-        min-height:350px;
+
+    .logo span {
+      color: var(--cyan);
     }
-    .window-demo{
-        width:240px;
-        height:285px;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #d3e5f3;
+      font-size: 13px;
+      font-weight: 700;
     }
-    .trust-grid{
-        grid-template-columns:1fr;
+
+    .nav-links a:hover {
+      color: var(--cyan);
     }
-    .trust-item{
-        border-right:0;
-        border-bottom:1px solid #e5eaee;
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 13px 23px;
+      border: 0;
+      border-radius: 13px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: .25s ease;
     }
-    .trust-item:last-child{
-        border-bottom:0;
+
+    .btn:hover {
+      transform: translateY(-3px);
     }
-    section{
-        padding:70px 0;
+
+    .btn-blue {
+      background: linear-gradient(120deg, #168de2, #35c4e1);
+      color: white;
+      box-shadow: 0 12px 30px rgba(22,141,226,.22);
     }
-    .section-title{
-        letter-spacing:-1px;
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      background: rgba(255,255,255,.05);
     }
-    .services,
-    .gallery{
-        grid-template-columns:1fr;
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(22,141,226,.24), transparent 42%),
+        linear-gradient(135deg, #07192c, #103657);
+      color: white;
+      padding: 100px 0 115px;
     }
-    .diagnostic-grid{
-        gap:35px;
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 65px;
+      align-items: center;
     }
-    .fields{
-        grid-template-columns:1fr;
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid rgba(78,217,239,.25);
+      border-radius: 100px;
+      background: rgba(78,217,239,.08);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
-    .full{
-        grid-column:auto;
+
+    h1 {
+      margin: 25px 0;
+      font-size: clamp(43px, 6vw, 76px);
+      line-height: 1.09;
+      letter-spacing: -3px;
     }
-    .form{
-        padding:20px;
+
+    h1 span {
+      color: var(--cyan);
     }
-    .footer{
-        flex-direction:column;
-        text-align:center;
+
+    .hero p {
+      max-width: 560px;
+      font-size: 16px;
+      color: #c0d5e5;
     }
-    .mobile-actions{
-        display:flex;
-        position:fixed;
-        left:50%;
-        bottom:12px;
-        transform:translateX(-50%);
-        width:calc(100% - 24px);
-        z-index:900;
-        gap:7px;
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 32px;
     }
-    .mobile-actions a{
-        flex:1;
-        text-align:center;
-        padding:13px;
-        border-radius:6px;
-        font-size:12px;
-        font-weight:900;
-        box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 25px;
+      margin-top: 36px;
+      color: #a9d5e9;
+      font-size: 12px;
+      font-weight: 700;
     }
-    .mobile-call{
-        background:#172631;
-        color:white;
+
+    .window-art {
+      position: relative;
+      height: 450px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, #174e78, #0c2c4a);
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 0 35px 90px rgba(0,0,0,.22);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
     }
-    .mobile-order{
-        background:#1769aa;
-        color:white;
+
+    .window-art::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: rgba(78,217,239,.13);
+      filter: blur(45px);
     }
-}
-</style>
+
+    .window {
+      position: relative;
+      width: 66%;
+      height: 72%;
+      background: linear-gradient(#8ac9e6, #d6f1f4);
+      border: 15px solid white;
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+      overflow: hidden;
+    }
+
+    .window::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 100%;
+      background: white;
+      left: calc(50% - 6px);
+      z-index: 2;
+    }
+
+    .window::after {
+      content: "";
+      position: absolute;
+      height: 12px;
+      width: 100%;
+      background: white;
+      top: 58%;
+      z-index: 2;
+    }
+
+    .hill {
+      position: absolute;
+      bottom: -70px;
+      width: 120%;
+      height: 190px;
+      border-radius: 50%;
+      background: #4b9ca4;
+      transform: rotate(-10deg);
+    }
+
+    .floating-label {
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      right: 20px;
+      padding: 17px;
+      background: rgba(255,255,255,.95);
+      color: var(--ink);
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-label {
+      color: #168de2;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 12px 0 18px;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.16;
+      letter-spacing: -2px;
+    }
+
+    .section-description {
+      color: #647b8e;
+      max-width: 670px;
+      margin-bottom: 38px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: .3s;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 50px rgba(15,55,85,.1);
+      border-color: #94cdea;
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      background: #eaf6fe;
+      border-radius: 16px;
+      font-size: 29px;
+      margin-bottom: 24px;
+    }
+
+    .service h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .service p {
+      margin: 0;
+      color: #647b8e;
+      font-size: 13px;
+    }
+
+    .dark-section {
+      background: var(--bg);
+      color: white;
+    }
+
+    .dark-section .section-description {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-grid p {
+      color: #c0d3e2;
+    }
+
+    .contact-card {
+      padding: 35px;
+      border-radius: 24px;
+      background: #123553;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .contact-row {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-row small {
+      display: block;
+      color: #82bbd9;
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+
+    .contact-row strong {
+      color: white;
+      overflow-wrap: anywhere;
+    }
+
+    .order-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .order-info p {
+      color: #647b8e;
+    }
+
+    .order-step {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin: 22px 0;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .order-step span {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      background: #e0f1fb;
+      color: #176da2;
+      border-radius: 12px;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      padding: 35px;
+      box-shadow: 0 25px 65px rgba(15,55,85,.08);
+    }
+
+    .form-card h3 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: -1px;
+    }
+
+    .form-card > p {
+      color: #647b8e;
+      font-size: 13px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 13px 15px;
+      border: 1px solid #d5e3ed;
+      border-radius: 12px;
+      background: #fbfdff;
+      outline: none;
+      color: var(--ink);
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(22,141,226,.1);
+    }
+
+    textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    details {
+      margin-top: 23px;
+      padding: 18px;
+      background: #f5faff;
+      border: 1px solid #deebf5;
+      border-radius: 15px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .form-note {
+      color: #647b8e;
+      font-size: 11px;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 23px;
+      font-size: 12px;
+    }
+
+    .consent input {
+      margin-top: 5px;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item summary {
+      padding: 22px 0;
+      font-size: 15px;
+    }
+
+    .faq-item p {
+      color: #647b8e;
+      margin: 0 0 22px;
+    }
+
+    .faq-item details {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
+
+    footer {
+      background: #051421;
+      color: #c4d5e3;
+      padding: 35px 0;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .mobile-bar {
+      display: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links a:not(.nav-order) {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .order-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .window-art {
+        height: 350px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+
+    @media (max-width: 550px) {
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .services,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+
+      .form-card {
+        padding: 22px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .mobile-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        gap: 10px;
+        padding: 12px;
+        background: rgba(7,25,44,.96);
+        z-index: 90;
+      }
+
+      .mobile-bar a {
+        flex: 1;
+        text-align: center;
+        padding: 12px;
+        border-radius: 10px;
+        background: #168de2;
+        color: white;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      footer {
+        padding-bottom: 100px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      * {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header id="header">
-<div class="container">
-<nav>
-<a href="#" class="logo">
-<div class="logo-mark"></div>
-OKNA KOLEK
-</a>
-<div class="nav-links">
-<a href="#sluzby">Služby</a>
-<a href="#o-nas">O nás</a>
-<a href="#oblast">Oblast servisu</a>
-<a href="#faq">FAQ</a>
-<a href="tel:+420737180350" class="nav-call">+420 737 180 350</a>
-<a href="#objednavka" class="nav-order">Objednat servis</a>
-</div>
-</nav>
-</div>
-</header>
-<!-- HERO -->
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow">
-Servis oken a dveří
-</div>
-<h1>
-Servis a seřízení oken v
-<span>Hradci Králové</span> a okolí.
-</h1>
-<p class="hero-text">
-Seřízení oken, kontrola těsnění, výměna prasklých skel a servis HS Portal posuvných dveří. Přijedeme přímo k vám.
-</p>
-<div class="hero-actions">
-<a href="#objednavka" class="btn primary">
-Objednat servis
-</a>
-<a href="tel:+420737180350" class="btn secondary">
-☎ Zavolat
-</a>
-</div>
-</div>
-<div class="hero-photo">
-<div class="window-demo"></div>
-<div class="visual-info">
-<strong>Servis přímo u vás</strong>
-<span>Hradec Králové • Pardubice • okolí do 60 km</span>
-</div>
-</div>
-</div>
-</section>
-<!-- TRUST -->
-<div class="trust">
-<div class="container trust-grid">
-<div class="trust-item">
-<strong>Hradec Králové</strong>
-<span>servis a okolí</span>
-</div>
-<div class="trust-item">
-<strong>Pardubice</strong>
-<span>servis a okolí</span>
-</div>
-<div class="trust-item">
-<strong>Do 60 km</strong>
-<span>oblast výjezdu</span>
-</div>
-</div>
-</div>
-<!-- SERVICES -->
-<section id="sluzby">
-<div class="container">
-<div class="section-head">
-<div class="section-label">
-Služby
-</div>
-<h2 class="section-title">
-Co pro vás můžeme vyřešit.
-</h2>
-<p class="section-text">
-Zaměřujeme se na běžný servis a seřízení oken a dveří přímo u zákazníka.
-</p>
-</div>
-<div class="services">
-<div class="service">
-<div class="service-number">01 / OKNA</div>
-<div class="service-icon">🪟</div>
-<h3>Seřízení oken</h3>
-<p>
-Okno drhne, špatně dovírá nebo se hůře ovládá? Zkontrolujeme jeho stav a provedeme potřebné seřízení.
-</p>
-</div>
-<div class="service">
-<div class="service-number">02 / SKLO</div>
-<div class="service-icon">◇</div>
-<h3>Výměna skel</h3>
-<p>
-Prasklé nebo poškozené sklo v okně či dveřích? Pomůžeme vyřešit vhodnou výměnu.
-</p>
-</div>
-<div class="service">
-<div class="service-number">03 / HS PORTAL</div>
-<div class="service-icon">↔</div>
-<h3>HS Portal</h3>
-<p>
-Seřízení velkých posuvných dveří pro jejich plynulejší a pohodlnější používání.
-</p>
-</div>
-</div>
-</div>
-</section>
-<!-- DIAGNOSTIKA -->
-<section class="diagnostic">
-<div class="container diagnostic-grid">
-<div>
-<div class="section-label">
-Interaktivní kontrola
-</div>
-<h2 class="section-title">
-Nevíte, co je s oknem?
-</h2>
-<p class="section-text">
-Odpovězte na několik jednoduchých otázek a zjistěte, co může být potřeba zkontrolovat.
-</p>
-<button class="btn primary" style="margin-top:28px" onclick="startCheck()">
-Spustit kontrolu
-</button>
-</div>
-<div class="check-box" id="checkBox">
-<div>
-<div style="font-size:50px">◈</div>
-<h3>Připraveno</h3>
-<p>
-Klikněte na tlačítko a začněte.
-</p>
-</div>
-</div>
-</div>
-</section>
-<!-- ABOUT -->
-<section id="o-nas" class="about">
-<div class="container about-grid">
-<div>
-<div class="section-label">
-OKNA KOLEK
-</div>
-<h2 class="section-title">
-Servis přijedeme udělat přímo k vám.
-</h2>
-<p class="about-copy">
-Přijedeme na místo, prohlédneme problém a společně domluvíme vhodné řešení. Rozsah práce se vždy odvíjí od konkrétního stavu oken nebo dveří.
-</p>
-</div>
-<div class="contact-card">
-<h3>Kontakt</h3>
-<div class="contact-row">
-<small>JMÉNO</small>
-<b>Miroslav Kolek</b>
-</div>
-<div class="contact-row">
-<small>TELEFON</small>
-<b><a href="tel:+420737180350">+420 737 180 350</a></b>
-</div>
-<div class="contact-row">
-<small>E-MAIL</small>
-<b><a href="mailto:miroslav.kolek@outlook.com">miroslav.kolek@outlook.com</a></b>
-</div>
-<div class="contact-row">
-<small>OBLAST</small>
-<b>Hradec Králové • Pardubice • okolí 60 km</b>
-</div>
-</div>
-</div>
-</section>
-<!-- GALERIE -->
-<section>
-<div class="container">
-<div class="section-head">
-<div class="section-label">
-Realizace
-</div>
-<h2 class="section-title">
-Ukázky práce.
-</h2>
-<p class="section-text">
-Sem později můžeme vložit skutečné fotografie vašich realizací.
-</p>
-</div>
-<div class="gallery">
-<div class="gallery-card">
-<div>
-<strong>Fotografie realizace</strong><br>
-Pošleme sem skutečnou fotografii.
-</div>
-</div>
-<div class="gallery-card">
-<div>
-<strong>Před / po seřízení</strong><br>
-Ukázka práce.
-</div>
-</div>
-<div class="gallery-card">
-<div>
-<strong>Servis oken a dveří</strong><br>
-Ukázka realizace.
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- MAP -->
-<section id="oblast" class="map-section">
-<div class="container">
-<div class="section-head">
-<div class="section-label">
-Oblast servisu
-</div>
-<h2 class="section-title">
-Kde působíme.
-</h2>
-</div>
-<div class="map-box">
-<div>
-<div class="map-icon">📍</div>
-<h3>
-Hradec Králové • Pardubice
-</h3>
-<p>
-Servis poskytujeme v Hradci Králové, Pardubicích a okolí do 60 km.
-</p>
-<a
-href="https://www.google.com/maps/search/Hradec+Kr%C3%A1lov%C3%A9"
-target="_blank"
-class="btn primary"
-style="margin-top:20px">
-Otevřít mapu
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- OBJEDNAVKA -->
-<section id="objednavka" class="order">
-<div class="container order-grid">
-<div>
-<div class="section-label">
-Objednávka
-</div>
-<h2 class="section-title">
-Objednejte servis.
-</h2>
-<p class="about-copy">
-Vyplňte co nejvíce informací. Díky tomu budeme před návštěvou lépe vědět, s čím vám můžeme pomoci.
-</p>
-<div class="steps">
-<div class="step">
-<div class="step-number">1</div>
-Vyplníte informace
-</div>
-<div class="step">
-<div class="step-number">2</div>
-Ozveme se vám
-</div>
-<div class="step">
-<div class="step-number">3</div>
-Domluvíme termín
-</div>
-</div>
-</div>
-<div class="form">
-<div id="successBox" class="success">
-<strong>Objednávka je připravena k odeslání.</strong><br>
-Číslo objednávky:
-<strong id="orderNumber"></strong>
-</div>
-<form
-id="orderForm"
-action="https://formsubmit.co/miroslav.kolek@outlook.com"
-method="POST"
-enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="Nová objednávka — OKNA KOLEK">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="Číslo objednávky" id="orderIdField">
-<div class="fields">
-<div class="field">
-<label>Jméno a příjmení</label>
-<input type="text" name="Jméno" required>
-</div>
-<div class="field">
-<label>Telefon</label>
-<input type="tel" name="Telefon" required>
-</div>
-<div class="field">
-<label>E-mail</label>
-<input type="email" name="E-mail" required>
-</div>
-<div class="field">
-<label>Jak vás kontaktovat?</label>
-<select name="Preferovaný kontakt">
-<option>Telefon</option>
-<option>SMS</option>
-<option>E-mail</option>
-</select>
-</div>
-<div class="field full">
-<label>Město / obec</label>
-<input type="text" name="Město" placeholder="Například Hradec Králové" required>
-</div>
-<div class="field full">
-<label>Adresa servisu</label>
-<input type="text" name="Adresa" placeholder="Ulice a číslo domu" required>
-<div class="help">
-Později můžeme doplnit skutečné mapové našeptávání adres.
-</div>
-</div>
-<div class="field">
-<label>Jaký servis potřebujete?</label>
-<select name="Služba" id="serviceSelect" onchange="updateForm()" required>
-<option value="">Vyberte službu</option>
-<option>Seřízení oken</option>
-<option>Kontrola těsnění / netěsnící okno</option>
-<option>Výměna prasklého skla</option>
-<option>Seřízení HS Portal posuvných dveří</option>
-<option>Jiný problém</option>
-</select>
-</div>
-<div class="field">
-<label>Počet oken / dveří</label>
-<select name="Počet">
-<option>1</option>
-<option>2–5</option>
-<option>6–10</option>
-<option>Více než 10</option>
-<option>Nevím</option>
-</select>
-</div>
-<div class="field">
-<label>Typ okna</label>
-<select name="Typ okna">
-<option>Nevím</option>
-<option>Plastové</option>
-<option>Dřevěné</option>
-<option>Hliníkové</option>
-<option>HS Portal</option>
-</select>
-</div>
-<div class="field">
-<label>Typ otevírání</label>
-<select name="Typ otevírání">
-<option>Nevím</option>
-<option>Klasické</option>
-<option>Výklopné</option>
-<option>Balkonové</option>
-<option>Posuvné</option>
-</select>
-</div>
-<div class="field">
-<label>Značka okna</label>
-<select name="Značka okna">
-<option>Nevím</option>
-<option>REHAU</option>
-<option>VEKA</option>
-<option>SALAMANDER</option>
-<option>GEALAN</option>
-<option>Schüco</option>
-<option>Internorm</option>
-<option>Jiná</option>
-</select>
-</div>
-<div class="field">
-<label>Značka kování</label>
-<select name="Značka kování">
-<option>Nevím</option>
-<option>Roto</option>
-<option>Maco</option>
-<option>Siegenia</option>
-<option>Winkhaus</option>
-<option>GU</option>
-<option>Internorm</option>
-<option>Jiná</option>
-</select>
-<button type="button" class="help-btn" onclick="toggleHelp()">
-🔍 Kde najdu značku kování?
-</button>
-<div id="helpBox" class="help-box">
-<strong>Kde hledat značku?</strong><br><br>
-Otevřete okno a podívejte se na kovové části kování po obvodu křídla. Označení bývá často vyražené na kovové liště, poblíž kliky nebo v rohu.<br><br>
-Pokud značku nemůžete najít, zvolte <strong>„Nevím“</strong>.
-</div>
-</div>
-<div class="field">
-<label>Přibližné stáří oken</label>
-<select name="Stáří oken">
-<option>Nevím</option>
-<option>Do 5 let</option>
-<option>5–10 let</option>
-<option>10–20 let</option>
-<option>Více než 20 let</option>
-</select>
-</div>
-<div class="field">
-<label>Počet křídel</label>
-<select name="Počet křídel">
-<option>Nevím</option>
-<option>1</option>
-<option>2</option>
-<option>3+</option>
-</select>
-</div>
-<div class="field">
-<label>Preferovaný den</label>
-<input type="date" name="Preferovaný den">
-</div>
-<div class="field">
-<label>Preferovaná část dne</label>
-<select name="Preferovaný čas">
-<option>Je mi to jedno</option>
-<option>Ráno</option>
-<option>Dopoledne</option>
-<option>Odpoledne</option>
-<option>Večer</option>
-</select>
-</div>
-<div class="field full">
-<label>
-<input type="checkbox" name="Urgentní servis" value="Ano" style="width:auto;margin-right:7px">
-Potřebuji servis co nejdříve
-</label>
-</div>
-<div class="field full">
-<label>Popis problému</label>
-<textarea
-name="Popis problému"
-placeholder="Například: okno netěsní, špatně dovírá, drhne, je prasklé sklo..."
-></textarea>
-</div>
-<div class="field full">
-<label>Fotografie problému</label>
-<input
-type="file"
-id="photos"
-name="Fotografie"
-accept="image/*"
-multiple
-onchange="previewPhotos(event)"
->
-<div class="help">
-Můžete přidat fotografie okna, kování nebo poškození.
-</div>
-<div id="photoPreview" class="photo-preview"></div>
-</div>
-<div class="field full">
-<label>
-<input type="checkbox" required style="width:auto;margin-right:7px">
-Souhlasím s odesláním údajů za účelem vyřízení objednávky.
-</label>
-</div>
-</div>
-<div id="summary" class="summary">
-<h3>📋 Shrnutí objednávky</h3>
-<p id="summaryText"></p>
-</div>
-<button
-type="button"
-class="btn primary submit"
-onclick="prepareOrder()">
-Zkontrolovat objednávku
-</button>
-<button
-type="submit"
-class="btn primary submit"
-id="realSubmit"
-style="display:none">
-Odeslat objednávku
-</button>
-</form>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section id="faq" class="faq">
-<div class="container">
-<div class="section-head">
-<div class="section-label">
-FAQ
-</div>
-<h2 class="section-title">
-Časté otázky.
-</h2>
-</div>
-<div class="faq-list">
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">
-Jak servis probíhá?
-<span>＋</span>
-</button>
-<div class="faq-answer">
-Po domluvě přijedeme přímo na místo, zkontrolujeme problém a domluvíme vhodné řešení.
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">
-Musím znát značku kování?
-<span>＋</span>
-</button>
-<div class="faq-answer">
-Ne. Pokud značku neznáte, vyberte možnost „Nevím“. Značku můžeme zjistit při kontrole.
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">
-Mohu poslat fotografii?
-<span>＋</span>
-</button>
-<div class="faq-answer">
-Ano. Fotografie může pomoci předem zjistit, jaký typ okna nebo kování máte.
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">
-Kde servis poskytujete?
-<span>＋</span>
-</button>
-<div class="faq-answer">
-Hradec Králové, Pardubice a okolí do 60 km.
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer>
-<div class="container footer">
-<b>OKNA KOLEK</b>
-<span>
-+420 737 180 350 • Hradec Králové • Pardubice • okolí 60 km
-</span>
-</div>
-</footer>
-<div class="mobile-actions">
-<a href="tel:+420737180350" class="mobile-call">
-☎ Zavolat
-</a>
-<a href="#objednavka" class="mobile-order">
-Objednat servis
-</a>
-</div>
-<script>
-/* HEADER */
-const header=document.getElementById("header");
-window.addEventListener("scroll",()=>{
-    if(window.scrollY>20){
-        header.classList.add("scrolled");
-    }else{
-        header.classList.remove("scrolled");
-    }
-});
-/* DIAGNOSTIKA */
-let question=0;
-const questions=[
-{
-text:"Cítíte kolem okna průvan nebo máte pocit, že netěsní?",
-answers:[
-["Ano","seal"],
-["Ne","next"]
-]
-},
-{
-text:"Jde okno hůře otevřít, zavřít nebo se hůře ovládá?",
-answers:[
-["Ano","adjust"],
-["Ne","next"]
-]
-},
-{
-text:"Je sklo prasklé nebo poškozené?",
-answers:[
-["Ano","glass"],
-["Ne","next"]
-]
-},
-{
-text:"Týká se problém velkých posuvných HS Portal dveří?",
-answers:[
-["Ano","portal"],
-["Ne","other"]
-]
-}
-];
-function startCheck(){
-    question=0;
-    showQuestion();
-}
-function showQuestion(){
-    const box=document.getElementById("checkBox");
-    const q=questions[question];
-    let html=`
-    <div style="width:100%">
-        <div style="font-size:10px;letter-spacing:1.5px;color:#91a5af;font-weight:800">
-            OTÁZKA ${question+1} / ${questions.length}
-        </div>
-        <div class="progress">
-            <div class="progress-bar"
-            style="width:${((question+1)/questions.length)*100}%">
-            </div>
-        </div>
-        <h3 style="font-size:23px;line-height:1.4;margin-bottom:18px">
-            ${q.text}
-        </h3>
-    `;
-    q.answers.forEach(answer=>{
-        html+=`
-        <button onclick="answer('${answer[1]}')">
-            ${answer[0]}
-        </button>
-        `;
-    });
-    html+=`</div>`;
-    box.innerHTML=html;
-}
-function answer(type){
-    if(type==="next"){
-        question++;
-        if(question>=questions.length){
-            showResult("other");
-        }else{
-            showQuestion();
-        }
-        return;
-    }
-    showResult(type);
-}
-function showResult(type){
-    const box=document.getElementById("checkBox");
-    let title="";
-    let text="";
-    let icon="";
-    if(type==="seal"){
-        icon="◌";
-        title="Možný problém s těsněním";
-        text="Průvan nebo horší těsnost může souviset s těsněním či nastavením okna.";
-    }
-    else if(type==="adjust"){
-        icon="⚙";
-        title="Možné seřízení";
-        text="Horší ovládání nebo zavírání může souviset s nastavením kování.";
-    }
-    else if(type==="glass"){
-        icon="◇";
-        title="Výměna skla";
-        text="Prasklé nebo poškozené sklo je vhodné řešit jeho výměnou.";
-    }
-    else if(type==="portal"){
-        icon="↔";
-        title="HS Portal";
-        text="U posuvných dveří může být vhodné odborné seřízení.";
-    }
-    else{
-        icon="◎";
-        title="Doporučujeme kontrolu";
-        text="Pokud si nejste jistí, popište problém v objednávce.";
-    }
-    box.innerHTML=`
-    <div style="width:100%">
-        <div style="font-size:50px;margin-bottom:10px">${icon}</div>
-        <h3>${title}</h3>
-        <p>${text}</p>
-        <a
-        href="#objednavka"
-        class="btn primary"
-        style="margin-top:22px">
+
+<header class="header">
+  <div class="container nav">
+    <a href="#uvod" class="logo">OKNA <span>KOLEK</span></a>
+
+    <nav class="nav-links">
+      <a href="#sluzby">Služby</a>
+      <a href="#o-nas">O nás</a>
+      <a href="#oblast">Kde působíme</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#objednavka" class="btn btn-blue nav-order">
         Objednat servis
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="uvod">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        RODINNÝ SERVIS • HRADEC KRÁLOVÉ & PARDUBICE
+      </div>
+
+      <h1>
+        Vaše okna.<br>
+        <span>Naše starost.</span>
+      </h1>
+
+      <p>
+        Profesionální přístup k servisu oken a dveří.
+        Seřízení, výměna kování, těsnění, skel i servis
+        posuvných dveří HS Portal.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-blue" href="#objednavka">
+          Nezávazně objednat servis ↗
         </a>
-        <button onclick="startCheck()">
-            Spustit znovu
-        </button>
+        <a class="btn btn-outline" href="tel:+420737180350">
+          Zavolat nám
+        </a>
+      </div>
+
+      <div class="hero-points">
+        <span>✓ Rodinná spolupráce otce a syna</span>
+        <span>✓ Osobní přístup</span>
+        <span>✓ Výjezdy do 60 km</span>
+      </div>
     </div>
-    `;
-}
-/* KOVÁNÍ */
-function toggleHelp(){
-    document.getElementById("helpBox").classList.toggle("show");
-}
-/* FOTOGRAFIE */
-function previewPhotos(event){
-    const preview=document.getElementById("photoPreview");
-    preview.innerHTML="";
-    const files=event.target.files;
-    for(let i=0;i<files.length;i++){
-        const file=files[i];
-        if(!file.type.startsWith("image/")) continue;
-        const reader=new FileReader();
-        reader.onload=function(e){
-            const img=document.createElement("img");
-            img.src=e.target.result;
-            preview.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-    }
-}
-/* FAQ */
-function toggleFaq(button){
-    button.parentElement.classList.toggle("active");
-}
-/* FORMULÁŘ */
-function updateForm(){
-    const service=document.getElementById("serviceSelect").value;
-    const textarea=document.querySelector(
-        "textarea[name='Popis problému']"
+
+    <div class="window-art" aria-label="Ilustrace okna">
+      <div class="window">
+        <div class="hill"></div>
+      </div>
+      <div class="floating-label">
+        🪟 Servis oken a dveří přímo u vás
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="container">
+
+    <div class="section-label">NAŠE SLUŽBY</div>
+    <h2>S čím vám pomůžeme?</h2>
+
+    <p class="section-description">
+      Od drobného seřízení až po náročnější opravy.
+      Pomůžeme najít vhodné řešení pro vaše okna a dveře.
+    </p>
+
+    <div class="services">
+
+      <article class="service reveal">
+        <div class="service-icon">🪟</div>
+        <h3>Seřízení oken</h3>
+        <p>
+          Okna drhnou, netěsní nebo špatně dovírají?
+          Provedeme kontrolu a potřebné seřízení.
+        </p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-icon">🚪</div>
+        <h3>Seřízení dveří</h3>
+        <p>
+          Seřizujeme balkonové, vstupní i další
+          typy dveří podle jejich konstrukce.
+        </p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-icon">⚙️</div>
+        <h3>Výměna kování</h3>
+        <p>
+          Oprava a výměna opotřebeného nebo
+          poškozeného okenního a dveřního kování.
+        </p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-icon">🛠️</div>
+        <h3>Výměna těsnění</h3>
+        <p>
+          Kontrola a výměna těsnění při
+          netěsnosti oken a dveří.
+        </p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-icon">💎</div>
+        <h3>Přesklení a výměna skel</h3>
+        <p>
+          Výměna prasklých a poškozených
+          skel v oknech i dveřích.
+        </p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-icon">↔️</div>
+        <h3>Servis HS Portal</h3>
+        <p>
+          Kontrola a seřízení velkých
+          posuvných dveří HS Portal.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="o-nas">
+  <div class="container about-grid">
+
+    <div>
+      <div class="section-label">O NÁS</div>
+      <h2>Jsme otec a syn.<br>Práce nás spojuje.</h2>
+
+      <p>
+        OKNA KOLEK je rodinná spolupráce otce a syna.
+        Spojujeme praktické zkušenosti, pečlivost
+        a osobní přístup ke každé zakázce.
+      </p>
+
+      <p>
+        Každé okno i dveře mohou mít jiný problém.
+        Proto se nejprve zaměřujeme na zjištění závady
+        a následně hledáme vhodné řešení.
+      </p>
+    </div>
+
+    <div class="contact-card" id="kontakt">
+      <h3>Kontaktujte nás</h3>
+
+      <div class="contact-row">
+        <small>KONTAKTNÍ OSOBA</small>
+        <strong>Miroslav Kolek</strong>
+      </div>
+
+      <div class="contact-row">
+        <small>TELEFON</small>
+        <strong>
+          <a href="tel:+420737180350">
+            +420 737 180 350
+          </a>
+        </strong>
+      </div>
+
+      <div class="contact-row">
+        <small>E-MAIL</small>
+        <strong>
+          <a href="mailto:oknakolek@gmail.com">
+            oknakolek@gmail.com
+          </a>
+        </strong>
+      </div>
+
+      <div class="contact-row">
+        <small>OBLAST</small>
+        <strong>Hradec Králové a Pardubice</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="oblast">
+  <div class="container">
+
+    <div class="section-label">KDE PŮSOBÍME</div>
+    <h2>Přijedeme přímo k vám.</h2>
+
+    <p class="section-description">
+      Servis poskytujeme v Hradci Králové,
+      Pardubicích a okolí do 60 km.
+      Nevíte, jestli k vám dojedeme?
+      Pošlete nezávaznou poptávku.
+    </p>
+
+    <a href="#objednavka" class="btn btn-blue">
+      Poptat servis ↗
+    </a>
+
+  </div>
+</section>
+
+<section id="objednavka">
+  <div class="container order-grid">
+
+    <div class="order-info">
+      <div class="section-label">ONLINE OBJEDNÁVKA</div>
+
+      <h2>Objednejte servis jednoduše.</h2>
+
+      <p>
+        Nemusíte znát značku oken ani technické údaje.
+        Stačí nám popsat problém.
+      </p>
+
+      <div class="order-step">
+        <span>01</span>
+        Vyplníte krátký formulář
+      </div>
+
+      <div class="order-step">
+        <span>02</span>
+        Objednávka dorazí na náš e-mail
+      </div>
+
+      <div class="order-step">
+        <span>03</span>
+        Ozveme se a domluvíme servis
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Nezávazná poptávka</h3>
+      <p>Vyplnění zabere přibližně 2 minuty.</p>
+
+      <form
+        id="orderForm"
+        action="https://formsubmit.co/oknakolek@gmail.com"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nová objednávka — OKNA KOLEK"
+        >
+
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-grid">
+
+          <div class="field full">
+            <label for="service">Jakou službu potřebujete?</label>
+            <select id="service" name="Služba" required>
+              <option value="">Vyberte službu</option>
+              <option>Seřízení oken</option>
+              <option>Seřízení dveří</option>
+              <option>Výměna kování</option>
+              <option>Výměna těsnění</option>
+              <option>Přesklení / výměna skel</option>
+              <option>Servis HS Portal</option>
+              <option>Jiný problém</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="name">Jméno a příjmení</label>
+            <input
+              id="name"
+              type="text"
+              name="Jméno"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input
+              id="phone"
+              type="tel"
+              name="Telefon"
+              autocomplete="tel"
+              required
+            >
+          </div>
+
+          <div class="field full">
+            <label for="city">Město / obec</label>
+            <input
+              id="city"
+              type="text"
+              name="Město"
+              placeholder="Například Pardubice"
+              required
+            >
+          </div>
+
+          <div class="field full">
+            <label for="problem">Popis problému</label>
+            <textarea
+              id="problem"
+              name="Popis problému"
+              placeholder="Například: okno netěsní, drhne nebo špatně dovírá..."
+              required
+            ></textarea>
+          </div>
+
+        </div>
+
+        <details>
+          <summary>＋ Přidat další informace (nepovinné)</summary>
+
+          <div class="form-grid">
+
+            <div class="field full">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="E-mail"
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="field full">
+              <label for="address">Adresa servisu</label>
+              <input
+                id="address"
+                type="text"
+                name="Adresa"
+                autocomplete="street-address"
+              >
+            </div>
+
+            <div class="field">
+              <label for="count">Počet oken / dveří</label>
+              <select id="count" name="Počet">
+                <option>1</option>
+                <option>2–5</option>
+                <option>6–10</option>
+                <option>Více než 10</option>
+                <option>Nevím</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferovaný termín</label>
+              <input
+                id="date"
+                type="date"
+                name="Preferovaný termín"
+              >
+            </div>
+
+            <div class="field full">
+              <label for="photo">Fotografie závady</label>
+              <input
+                id="photo"
+                type="file"
+                name="Fotografie"
+                accept="image/*"
+              >
+              <small class="form-note">
+                Fotografie je nepovinná.
+              </small>
+            </div>
+
+          </div>
+        </details>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>
+            Souhlasím se zpracováním uvedených údajů
+            za účelem vyřízení poptávky.
+          </span>
+        </label>
+
+        <button class="btn btn-blue submit" type="submit">
+          Odeslat nezávaznou poptávku ↗
+        </button>
+
+        <p class="form-note">
+          Po odeslání přijde objednávka na náš e-mail.
+          Následně vás kontaktujeme.
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-label">ČASTÉ OTÁZKY</div>
+    <h2>Na co se nás ptáte?</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary>Kolik servis stojí?</summary>
+        <p>
+          Cena závisí na rozsahu práce, typu závady
+          a potřebných náhradních dílech.
+          Vše upřesníme při domluvě.
+        </p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Musím znát značku oken?</summary>
+        <p>
+          Ne. Stačí popsat závadu.
+          Další informace zjistíme při komunikaci.
+        </p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Mohu poslat fotografii?</summary>
+        <p>
+          Ano, fotografii můžete přiložit
+          přímo k objednávce.
+        </p>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary>Kde poskytujete servis?</summary>
+        <p>
+          V Hradci Králové, Pardubicích
+          a okolí do 60 km.
+        </p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>OKNA KOLEK</strong>
+    <p>
+      Servis oken a dveří • Hradec Králové • Pardubice
+    </p>
+    <p>
+      <a href="tel:+420737180350">+420 737 180 350</a>
+      •
+      <a href="mailto:oknakolek@gmail.com">
+        oknakolek@gmail.com
+      </a>
+    </p>
+    <small>© <span id="year"></span> OKNA KOLEK</small>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+420737180350">☎ Zavolat</a>
+  <a href="#objednavka">Objednat servis</a>
+</div>
+
+<script>
+  // Aktuální rok v patičce
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Jemné animace při posouvání stránky
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
     );
-    if(service==="Výměna prasklého skla"){
-        textarea.placeholder=
-        "Popište například kde je sklo prasklé, velikost nebo typ okna...";
-    }
-    else if(service==="Seřízení HS Portal posuvných dveří"){
-        textarea.placeholder=
-        "Popište například jestli dveře drhnou, nejdou dovřít nebo se špatně posouvají...";
-    }
-    else{
-        textarea.placeholder=
-        "Například: okno netěsní, špatně dovírá, drhne, je prasklé sklo...";
-    }
-}
-/* ČÍSLO OBJEDNÁVKY */
-function generateOrderNumber(){
-    const date=new Date();
-    const year=date.getFullYear();
-    const random=Math.floor(1000+Math.random()*9000);
-    return "OK-"+year+"-"+random;
-}
-/* SHRNUTÍ */
-function prepareOrder(){
-    const form=document.getElementById("orderForm");
-    if(!form.checkValidity()){
-        form.reportValidity();
-        return;
-    }
-    const data=new FormData(form);
-    const orderNumber=generateOrderNumber();
-    document.getElementById("orderNumber").textContent=orderNumber;
-    document.getElementById("orderIdField").value=orderNumber;
-    const summary=`
-    <strong>Číslo:</strong> ${data.get("Číslo objednávky")}<br>
-    <strong>Jméno:</strong> ${data.get("Jméno")}<br>
-    <strong>Služba:</strong> ${data.get("Služba")}<br>
-    <strong>Město:</strong> ${data.get("Město")}<br>
-    <strong>Adresa:</strong> ${data.get("Adresa")}<br>
-    <strong>Typ okna:</strong> ${data.get("Typ okna")}<br>
-    <strong>Značka okna:</strong> ${data.get("Značka okna")}<br>
-    <strong>Kování:</strong> ${data.get("Značka kování")}<br>
-    <strong>Počet:</strong> ${data.get("Počet")}<br>
-    <strong>Termín:</strong> ${data.get("Preferovaný den") || "neuveden"}<br>
-    <strong>Čas:</strong> ${data.get("Preferovaný čas")}<br>
-    <strong>Kontakt:</strong> ${data.get("Preferovaný kontakt")}
-    `;
-    document.getElementById("summaryText").innerHTML=summary;
-    document.getElementById("summary").classList.add("show");
-    document.getElementById("successBox").classList.add("show");
-    document.getElementById("realSubmit").style.display="flex";
-    document.querySelector(
-        ".submit[onclick='prepareOrder()']"
-    ).style.display="none";
-    document.getElementById("summary").scrollIntoView({
-        behavior:"smooth",
-        block:"center"
+
+    document.querySelectorAll(".reveal").forEach((item) => {
+      observer.observe(item);
     });
-}
-console.log("OKNA KOLEK web loaded");
+  } else {
+    document.querySelectorAll(".reveal").forEach((item) => {
+      item.classList.add("visible");
+    });
+  }
+
+  // Nastavení nejbližšího možného termínu
+  const dateInput = document.getElementById("date");
+
+  const today = new Date();
+  const localDate = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+  );
+
+  dateInput.min = localDate.toISOString().split("T")[0];
+
+  // Ochrana před opakovaným kliknutím na odeslání
+  const orderForm = document.getElementById("orderForm");
+
+  orderForm.addEventListener("submit", function () {
+    const submitButton = orderForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Odesílání objednávky...";
+  });
 </script>
+
 </body>
 </html>
