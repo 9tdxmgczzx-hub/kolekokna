@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -906,9 +905,8 @@
 
       <form
         id="orderForm"
-        action="https://formsubmit.co/oknakolek@gmail.com"
+        action="https://formspree.io/f/xqpqqypy"
         method="POST"
-        enctype="multipart/form-data"
       >
 
         <input
@@ -917,8 +915,7 @@
           value="Nová objednávka — OKNA KOLEK"
         >
 
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-grid">
 
@@ -991,7 +988,7 @@
               <input
                 id="email"
                 type="email"
-                name="E-mail"
+                name="email"
                 autocomplete="email"
               >
             </div>
@@ -1027,15 +1024,10 @@
             </div>
 
             <div class="field full">
-              <label for="photo">Fotografie závady</label>
-              <input
-                id="photo"
-                type="file"
-                name="Fotografie"
-                accept="image/*"
-              >
+              <label>Fotografie závady</label>
               <small class="form-note">
-                Fotografie je nepovinná.
+                Fotografie můžete poslat samostatně na
+                <a href="mailto:oknakolek@gmail.com"><u>oknakolek@gmail.com</u></a>.
               </small>
             </div>
 
@@ -1043,7 +1035,7 @@
         </details>
 
         <label class="consent">
-          <input type="checkbox" required>
+          <input type="checkbox" name="Souhlas" value="Ano" required>
           <span>
             Souhlasím se zpracováním uvedených údajů
             za účelem vyřízení poptávky.
@@ -1053,6 +1045,8 @@
         <button class="btn btn-blue submit" type="submit">
           Odeslat nezávaznou poptávku ↗
         </button>
+
+        <p id="formStatus" role="status" aria-live="polite" hidden style="padding:14px;border-radius:12px;overflow-wrap:anywhere;font-weight:700"></p>
 
         <p class="form-note">
           Po odeslání přijde objednávka na náš e-mail.
@@ -1096,8 +1090,7 @@
       <details>
         <summary>Mohu poslat fotografii?</summary>
         <p>
-          Ano, fotografii můžete přiložit
-          přímo k objednávce.
+          Ano, fotografii můžete poslat e-mailem na oknakolek@gmail.com.
         </p>
       </details>
     </div>
@@ -1177,16 +1170,55 @@
 
   dateInput.min = localDate.toISOString().split("T")[0];
 
-  // Ochrana před opakovaným kliknutím na odeslání
+  // Odeslání objednávky přes Formspree bez přesměrování
   const orderForm = document.getElementById("orderForm");
+  const submitButton = orderForm.querySelector('button[type="submit"]');
+  const status = document.getElementById("formStatus");
+  const originalLabel = submitButton.textContent.trim();
 
-  orderForm.addEventListener("submit", function () {
-    const submitButton = orderForm.querySelector(
-      'button[type="submit"]'
-    );
+  function showStatus(message, ok) {
+    status.hidden = false;
+    status.textContent = message;
+    status.style.backgroundColor = ok ? "#e8f7ee" : "#fff0ee";
+    status.style.color = ok ? "#17643c" : "#9c2c22";
+  }
 
+  orderForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    if (submitButton.disabled) return;
+    const data = new FormData(orderForm);
+    if (!data.get("email")) data.delete("email");
+    const body = new URLSearchParams(data);
     submitButton.disabled = true;
     submitButton.textContent = "Odesílání objednávky...";
+    status.hidden = true;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch(orderForm.action, {
+        method: "POST",
+        body: body,
+        headers: { "Accept": "application/json" },
+        signal: controller.signal
+      });
+      const result = await response.json().catch(() => null);
+      if (response.ok && result && !result.errors && result.ok !== false) {
+        showStatus("Děkujeme! Vaše objednávka byla úspěšně odeslána. Brzy vás kontaktujeme.", true);
+        orderForm.reset();
+      } else {
+        showStatus("Objednávku se nepodařilo potvrdit (HTTP " + response.status + "). Zkuste to později nebo nám zavolejte na +420 737 180 350.", false);
+      }
+    } catch (error) {
+      showStatus("Odeslání se nepodařilo ověřit. Zkontrolujte připojení nebo nám zavolejte na +420 737 180 350.", false);
+    } finally {
+      clearTimeout(timeout);
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
+  });
+  window.addEventListener("pageshow", () => {
+    submitButton.disabled = false;
+    submitButton.textContent = originalLabel;
   });
 </script>
 
